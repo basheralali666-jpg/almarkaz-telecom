@@ -41,11 +41,48 @@ const phone="966550011909",products=[
 {id:10,name:"Sony PlayStation 5 Slim Digital",cat:"ألعاب",price:2529,icon:"🎮",source:"https://www.jarir.com/video-pc-gaming.html"},
 {id:11,name:"Logitech G Driving Force G29",cat:"ألعاب",price:829,icon:"🎮",source:"https://www.jarir.com/video-pc-gaming.html"},
 {id:12,name:"Huawei FreeBuds SE 2",cat:"سماعات",price:89,icon:"🎧",source:"https://www.jarir.com/computer-peripherals.html"}
-];let cart=[];
-function money(n){return n.toLocaleString("en-US")+" ر.س"}function render(){let q=document.getElementById("search").value.toLowerCase();document.getElementById("grid").innerHTML=products.filter(p=>(p.name+" "+p.cat).toLowerCase().includes(q)).map(p=>'<article class="card"><div class="photo"><span class="product-icon">'+p.icon+'</span></div><div class="info"><small class="tag">'+p.cat+'</small><h3>'+p.name+'</h3><div class="price">'+money(p.price)+'</div><small style="display:block;color:#888;font-size:10px;margin-bottom:9px">سعر مرجعي من جرير — قابل للتغيير</small><a class="add" style="display:block;text-align:center;margin-bottom:7px" href="'+p.source+'" target="_blank" rel="noopener">تحقق من السعر والمواصفات</a><button class="add" onclick="add('+p.id+')">أضف إلى السلة ＋</button></div></article>').join("")}function add(id){let x=cart.find(p=>p.id===id);if(x)x.qty++;else cart.push({id,qty:1});document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.qty,0)}
+,
+{id:13,name:"iPhone Duo 256GB",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:14,name:"iPhone 18 Pro Max",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:15,name:"iPhone 18 Pro",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:16,name:"iPhone Air",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:17,name:"iPhone 17 Pro Max",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:18,name:"iPhone 17 Pro",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:19,name:"iPhone 17",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:20,name:"iPhone 17e",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:21,name:"iPhone 16",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:22,name:"Samsung Galaxy S26 Ultra",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
+{id:23,name:"Samsung Galaxy S26+",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
+{id:24,name:"Samsung Galaxy S26",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
+{id:25,name:"Samsung Galaxy S26 FE",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
+{id:26,name:"Samsung Galaxy S25 Ultra",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
+{id:27,name:"Samsung Galaxy S25 Edge",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
+{id:28,name:"Samsung Galaxy S25+",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
+{id:29,name:"Samsung Galaxy S25",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
+{id:30,name:"Samsung Galaxy Z Fold8 Ultra",cat:"سامسونج",price:null,icon:"📱",source:"https://www.jarir.com/sa-en/all-smartphones.html"},
+{id:31,name:"Samsung Galaxy Z Fold8",cat:"سامسونج",price:null,icon:"📱",source:"https://www.jarir.com/sa-en/all-smartphones.html"},
+{id:32,name:"Samsung Galaxy Z Flip8",cat:"سامسونج",price:null,icon:"📱",source:"https://www.jarir.com/sa-en/all-smartphones.html"},
+{id:33,name:"Samsung Galaxy Z Fold7",cat:"سامسونج",price:null,icon:"📱",source:"https://www.jarir.com/sa-en/all-smartphones.html"},
+{id:34,name:"Samsung Galaxy Z Flip7",cat:"سامسونج",price:null,icon:"📱",source:"https://www.jarir.com/sa-en/all-smartphones.html"},
+{id:35,name:"Samsung Galaxy A57 5G",cat:"سامسونج",price:null,icon:"📱",source:"https://www.jarir.com/sa-en/all-smartphones.html"},
+{id:36,name:"Samsung Galaxy A56 5G",cat:"سامسونج",price:null,icon:"📱",source:"https://www.jarir.com/sa-en/all-smartphones.html"},
+{id:37,name:"Samsung Galaxy A36 5G",cat:"سامسونج",price:null,icon:"📱",source:"https://www.jarir.com/sa-en/all-smartphones.html"},
+{id:38,name:"Samsung Galaxy A26 5G",cat:"سامسونج",price:null,icon:"📱",source:"https://www.jarir.com/sa-en/all-smartphones.html"},
+{id:39,name:"HUAWEI Pura 90 Pro Max",cat:"هواوي",price:null,icon:"📱",source:"https://www.jarir.com/sa-en/all-smartphones.html"},
+{id:40,name:"HUAWEI Pura 90 Pro",cat:"هواوي",price:null,icon:"📱",source:"https://www.jarir.com/sa-en/all-smartphones.html"},
+{id:41,name:"HUAWEI Pura 80 Pro",cat:"هواوي",price:null,icon:"📱",source:"https://consumer.huawei.com/sa/phones/"},
+{id:42,name:"HUAWEI Pura 80",cat:"هواوي",price:null,icon:"📱",source:"https://consumer.huawei.com/sa/phones/"},
+{id:43,name:"HUAWEI Mate X6",cat:"هواوي",price:null,icon:"📱",source:"https://consumer.huawei.com/sa/phones/"},
+{id:44,name:"HUAWEI nova 16s Pro",cat:"هواوي",price:null,icon:"📱",source:"https://www.jarir.com/sa-en/all-smartphones.html"},
+{id:45,name:"HUAWEI nova 16s",cat:"هواوي",price:null,icon:"📱",source:"https://www.jarir.com/sa-en/all-smartphones.html"},
+{id:46,name:"HUAWEI nova 14 Pro",cat:"هواوي",price:null,icon:"📱",source:"https://consumer.huawei.com/sa/phones/"},
+{id:47,name:"HUAWEI nova 14",cat:"هواوي",price:null,icon:"📱",source:"https://consumer.huawei.com/sa/phones/"},
+{id:48,name:"HUAWEI nova 13 Pro",cat:"هواوي",price:null,icon:"📱",source:"https://consumer.huawei.com/sa/phones/"},
+{id:49,name:"HUAWEI nova 13",cat:"هواوي",price:null,icon:"📱",source:"https://consumer.huawei.com/sa/phones/"}];let cart=[];
+function money(n){return n==null?"السعر عند الطلب":n.toLocaleString("en-US")+" ر.س"}function render(){let q=document.getElementById("search").value.toLowerCase();document.getElementById("grid").innerHTML=products.filter(p=>(p.name+" "+p.cat).toLowerCase().includes(q)).map(p=>'<article class="card"><div class="photo"><span class="product-icon">'+p.icon+'</span></div><div class="info"><small class="tag">'+p.cat+'</small><h3>'+p.name+'</h3><div class="price">'+money(p.price)+'</div><small style="display:block;color:#888;font-size:10px;margin-bottom:9px">السعر والتوفر حسب السعة واللون والمخزون</small><a class="add" style="display:block;text-align:center;margin-bottom:7px" href="'+p.source+'" target="_blank" rel="noopener">تحقق من السعر والمواصفات</a><button class="add" onclick="add('+p.id+')">أضف إلى السلة ＋</button></div></article>').join("")}function add(id){let x=cart.find(p=>p.id===id);if(x)x.qty++;else cart.push({id,qty:1});document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.qty,0)}
 function openCart(){renderCart();document.getElementById("cart").classList.add("open")}function closeCart(){document.getElementById("cart").classList.remove("open")}
-function renderCart(){document.getElementById("items").innerHTML=cart.map(x=>{let p=products.find(y=>y.id===x.id);return '<div class="line"><span>'+p.name+' × '+x.qty+'</span><b>'+money(p.price*x.qty)+'</b><button onclick="removeItem('+x.id+')">حذف</button></div>'}).join("")||"<p>السلة فارغة</p>";document.getElementById("total").textContent=money(cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0))}
+function renderCart(){document.getElementById("items").innerHTML=cart.map(x=>{let p=products.find(y=>y.id===x.id);return '<div class="line"><span>'+p.name+' × '+x.qty+'</span><b>'+money(p.price==null?null:p.price*x.qty)+'</b><button onclick="removeItem('+x.id+')">حذف</button></div>'}).join("")||"<p>السلة فارغة</p>";document.getElementById("total").textContent=money(cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0))}
 function removeItem(id){cart=cart.filter(x=>x.id!==id);document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.qty,0);renderCart()}
-function sendOrder(){if(!cart.length)return alert("السلة فارغة");let rows=cart.map(x=>{let p=products.find(y=>y.id===x.id);return p.name+" × "+x.qty+" = "+money(p.price*x.qty)});let sum=cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0);window.open("https://wa.me/"+phone+"?text="+encodeURIComponent("طلب من المركز للاتصالات\n"+rows.join("\n")+"\nالإجمالي: "+money(sum)),"_blank")}
+function sendOrder(){if(!cart.length)return alert("السلة فارغة");let rows=cart.map(x=>{let p=products.find(y=>y.id===x.id);return p.name+" × "+x.qty+" = "+money(p.price==null?null:p.price*x.qty)});let sum=cart.reduce((s,x)=>s+(products.find(p=>p.id===x.id).price||0)*x.qty,0);let quote=cart.some(x=>products.find(p=>p.id===x.id).price==null);window.open("https://wa.me/"+phone+"?text="+encodeURIComponent("طلب / استفسار سعر من المركز للاتصالات\n"+rows.join("\n")+"\n"+(quote?"يرجى تأكيد السعر والتوفر والإجمالي.":"الإجمالي: "+money(sum))),"_blank")}
 let current=0,slides=[...document.querySelectorAll(".slide")],dots=[...document.querySelectorAll(".dot")];function showSlide(i){current=i;slides.forEach((s,n)=>s.classList.toggle("active",n===i));dots.forEach((d,n)=>d.classList.toggle("active",n===i))}setInterval(()=>showSlide((current+1)%slides.length),5000);document.getElementById("year").textContent=new Date().getFullYear();document.getElementById("cart").addEventListener("click",e=>{if(e.target.id==="cart")closeCart()});render();
 </script></body></html>
