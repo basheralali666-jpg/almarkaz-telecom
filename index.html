@@ -8,7 +8,7 @@ section{padding:25px 0}.heading{display:flex;justify-content:space-between;align
 <header><div class="wrap top"><a class="brand" href="#"><div class="logo">M</div><div><b>المركز للاتصالات</b><small>AL MARKAZ TELECOM</small></div></a><div class="search"><input id="search" placeholder="ابحث عن المنتجات..." oninput="render()"></div><div class="tools"><button class="tool" onclick="document.getElementById('search').focus()">⌕</button><button class="tool" onclick="openCart()">🛒<span class="count" id="count">0</span></button></div></div><nav><div class="wrap nav"><a href="#">الرئيسية</a><a href="#products">جميع المنتجات</a><a href="#products">آيفون</a><a href="#products">سامسونج</a><a href="#products">الساعات</a><a href="#products">السماعات</a><a href="#products">الإكسسوارات</a><a href="#branches">فروعنا</a><a href="#contact">تواصل معنا</a></div></nav></header>
 <div class="wrap hero"><div class="slides"><article class="slide active"><div class="copy"><div class="eyebrow">✦ أهلاً بك في المركز للاتصالات</div><h1>أحدث التقنيات<br>تبدأ من هنا</h1><p>اكتشف أحدث أجهزة الجوال والإكسسوارات الأصلية بتجربة تسوق سهلة ومميزة.</p><a class="cta" href="#products">تسوق الآن</a></div><div class="art">📱</div></article><article class="slide"><div class="copy"><div class="eyebrow">✦ اختيارات تليق بك</div><h1>كل ما تحتاجه<br>في مكان واحد</h1><p>جوالات وسماعات وساعات ذكية وإكسسوارات مختارة بعناية.</p><a class="cta" href="#products">اكتشف المنتجات</a></div><div class="art">🎧</div></article><article class="slide"><div class="copy"><div class="eyebrow">✦ خدمة أسهل وأسرع</div><h1>تسوق براحتك<br>ونحن بخدمتك</h1><p>أرسل طلبك مباشرة عبر واتساب وتواصل مع فريق المركز.</p><a class="cta" href="https://wa.me/966550011909">تواصل معنا</a></div><div class="art">⌚</div></article></div><div class="dots"><button class="dot active" onclick="showSlide(0)"></button><button class="dot" onclick="showSlide(1)"></button><button class="dot" onclick="showSlide(2)"></button></div></div>
 <main class="wrap"><section><div class="heading"><div><h2>تسوق حسب القسم</h2><p>اختر القسم المناسب لك</p></div></div><div class="categories">
-<a class="cat" href="https://www.jarir.com/smartphones-x.html" target="_blank"><i>📱</i><b>الجوالات</b></a>
+<a class="cat" href="#iphone"><i>📱</i><b>آيفون</b></a><a class="cat" href="#huawei"><i>📱</i><b>هواوي</b></a><a class="cat" href="#samsung"><i>📱</i><b>سامسونج</b></a>
 <a class="cat" href="https://www.jarir.com/laptops-x.html" target="_blank"><i>💻</i><b>اللابتوبات</b></a>
 <a class="cat" href="https://www.jarir.com/1479" target="_blank"><i>📺</i><b>التلفزيونات</b></a>
 <a class="cat" href="https://www.jarir.com/smartwatches-wearables.html" target="_blank"><i>⌚</i><b>الساعات الذكية</b></a>
@@ -21,6 +21,39 @@ section{padding:25px 0}.heading{display:flex;justify-content:space-between;align
 <a class="cat" href="https://www.jarir.com/special-offers" target="_blank"><i>🎧</i><b>السماعات والإكسسوارات</b></a>
 <a class="cat" href="https://www.jarir.com/" target="_blank"><i>📚</i><b>الكتب والمستلزمات</b></a>
 </div></section>
+
+<style>
+.brand-showcase{border:1px solid #eee;border-radius:10px;overflow:hidden;margin:18px 0 28px;background:#fff}
+.brand-showcase .brand-head{padding:20px 22px;background:#f7f7f7;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand-showcase h2{margin:0;font-size:22px}.brand-showcase .brand-head p{margin:7px 0 0;color:#777;font-size:12px}
+.brand-showcase .brand-photo{height:230px;background:#fafafa;display:flex;align-items:center;justify-content:center;padding:16px}
+.brand-showcase .brand-photo img{width:100%;height:100%;object-fit:contain}
+.brand-showcase .model-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:15px}
+.model-link{border:1px solid #eee;border-radius:7px;padding:12px;display:flex;flex-direction:column;gap:10px;justify-content:space-between;min-height:86px}
+.model-link b{font-size:12px;line-height:1.6}.model-link a{font-size:11px;color:var(--red);font-weight:bold}
+@media(max-width:600px){.brand-showcase .brand-photo{height:170px}.brand-showcase .model-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.brand-showcase h2{font-size:18px}}
+</style>
+<section class="brand-showcase" id="iphone">
+ <div class="brand-head"><div><h2>Apple iPhone</h2><p>موديلات آيفون مرتبة من الأحدث إلى الأقدم — صور رسمية من Apple</p></div><a href="https://www.apple.com/sa-ar/iphone/" target="_blank" style="color:var(--red);font-size:12px">الموقع الرسمي ↗</a></div>
+ <div class="brand-photo"><img src="https://www.apple.com/v/iphone-17/e/images/overview/welcome/hero_startframe__e9e7pcnguyqi_xlarge.jpg" alt="صورة رسمية من Apple لأجهزة iPhone" loading="lazy"></div>
+ <div class="model-list" id="iphoneModels"></div>
+</section>
+<section class="brand-showcase" id="huawei">
+ <div class="brand-head"><div><h2>هواتف HUAWEI</h2><p>سلاسل Pura وMate وnova — صور رسمية من هواوي</p></div><a href="https://consumer.huawei.com/sa/phones/" target="_blank" style="color:var(--red);font-size:12px">الموقع الرسمي ↗</a></div>
+ <div class="brand-photo" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+  <img src="https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp-arab/phones/pura90s-pro-max/img/kv/kv.jpg" alt="HUAWEI Pura 90s Pro Max" loading="lazy">
+  <img src="https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp-arab/phones/mate80-pro/img/kv/kv.jpg" alt="HUAWEI Mate 80 Pro" loading="lazy">
+ </div>
+ <div class="model-list" id="huaweiModels"></div>
+</section>
+<section class="brand-showcase" id="samsung">
+ <div class="brand-head"><div><h2>هواتف Samsung Galaxy</h2><p>سلاسل S وZ وA — صور رسمية من سامسونج</p></div><a href="https://www.samsung.com/sa_en/smartphones/" target="_blank" style="color:var(--red);font-size:12px">الموقع الرسمي ↗</a></div>
+ <div class="brand-photo" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+  <img src="https://images.samsung.com/sa_en/smartphones/galaxy-s26-ultra/buy/kv_exclusive_group_PC.jpg?imbypass=true" alt="Samsung Galaxy S26 Ultra" loading="lazy">
+  <img src="https://images.samsung.com/sa_en/smartphones/galaxy-z-fold8-ultra/buy/kv_animated_PC.jpg?imbypass=true" alt="Samsung Galaxy Z Fold8 Ultra" loading="lazy">
+ </div>
+ <div class="model-list" id="samsungModels"></div>
+</section>
 <section id="products"><div class="heading"><div><h2>منتجات المركز</h2><p>أسعار مرجعية وروابط مباشرة للتحقق من المواصفات والتوفر</p></div><a href="#products" style="color:var(--red);font-size:12px">عرض الكل ←</a></div><div class="grid" id="grid"></div><p style="font-size:11px;color:#888;line-height:1.8;margin-top:14px">المنتجات والأسعار المعروضة عينة مرجعية من صفحات جرير السعودية وليست تأكيداً لتوفرها لدى المركز. تحقق من السعر الحالي والمواصفات من رابط المصدر قبل الشراء.</p></section>
 <section id="branches"><div class="panel"><div class="heading"><div><h2>فروع المركز للاتصالات</h2><p>جاهزين لخدمتكم ونرحب باستفساراتكم</p></div></div><div class="pills"><div class="pill">📍 تواصل معنا لمعرفة موقع الفرع</div><div class="pill">📦 خدمة الطلبات والتوصيل</div><div class="pill">☎️ خدمة العملاء</div></div></div></section>
 <section><div class="heading"><div><h2>آراء العملاء</h2><p>ثقتكم هي سر تميزنا</p></div></div><div class="reviews"><article class="review"><div class="stars">★★★★★</div>تجربة تسوق مميزة وتعامل راقٍ، بالتوفيق دائماً.<br><b>عميل المركز</b></article><article class="review"><div class="stars">★★★★★</div>خدمة ممتازة وسرعة في الرد والتواصل.<br><b>عميل المركز</b></article><article class="review"><div class="stars">★★★★★</div>تنوع في المنتجات وأسعار مناسبة، شكراً لكم.<br><b>عميل المركز</b></article></div></section>
@@ -79,7 +112,15 @@ const phone="966550011909",products=[
 {id:47,name:"HUAWEI nova 14",cat:"هواوي",price:null,icon:"📱",source:"https://consumer.huawei.com/sa/phones/"},
 {id:48,name:"HUAWEI nova 13 Pro",cat:"هواوي",price:null,icon:"📱",source:"https://consumer.huawei.com/sa/phones/"},
 {id:49,name:"HUAWEI nova 13",cat:"هواوي",price:null,icon:"📱",source:"https://consumer.huawei.com/sa/phones/"}];let cart=[];
-function money(n){return n==null?"السعر عند الطلب":n.toLocaleString("en-US")+" ر.س"}function render(){let q=document.getElementById("search").value.toLowerCase();document.getElementById("grid").innerHTML=products.filter(p=>(p.name+" "+p.cat).toLowerCase().includes(q)).map(p=>'<article class="card"><div class="photo"><span class="product-icon">'+p.icon+'</span></div><div class="info"><small class="tag">'+p.cat+'</small><h3>'+p.name+'</h3><div class="price">'+money(p.price)+'</div><small style="display:block;color:#888;font-size:10px;margin-bottom:9px">السعر والتوفر حسب السعة واللون والمخزون</small><a class="add" style="display:block;text-align:center;margin-bottom:7px" href="'+p.source+'" target="_blank" rel="noopener">تحقق من السعر والمواصفات</a><button class="add" onclick="add('+p.id+')">أضف إلى السلة ＋</button></div></article>').join("")}function add(id){let x=cart.find(p=>p.id===id);if(x)x.qty++;else cart.push({id,qty:1});document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.qty,0)}
+function money(n){return n==null?"السعر عند الطلب":n.toLocaleString("en-US")+" ر.س"}
+const brandModels={
+iphone:["iPhone Duo","iPhone 18 Pro Max","iPhone 18 Pro","iPhone Air","iPhone 17","iPhone 17e","iPhone 16"],
+huawei:["HUAWEI Pura 90s Pro Max","HUAWEI Pura 90s Pro","HUAWEI Pura 80 Ultra","HUAWEI Pura 80 Pro","HUAWEI Pura 80","HUAWEI Mate 80 Pro","HUAWEI Mate X7","HUAWEI Mate XT ULTIMATE DESIGN","HUAWEI Mate X6","HUAWEI nova 16s Pro","HUAWEI nova 16s","HUAWEI nova 15 Max","HUAWEI nova 14 Pro","HUAWEI nova 14","HUAWEI nova 13 Pro","HUAWEI nova 13","HUAWEI nova Y74","HUAWEI nova Y73"],
+samsung:["Galaxy S26 Ultra","Galaxy S26+","Galaxy S26","Galaxy S26 FE","Galaxy Z Fold8 Ultra","Galaxy Z Fold8","Galaxy Z Flip8","Galaxy A57 5G","Galaxy S25 Ultra","Galaxy S25 Edge","Galaxy S25+","Galaxy S25","Galaxy Z Fold7","Galaxy Z Flip7","Galaxy A56 5G","Galaxy A36 5G","Galaxy A26 5G"]
+};
+function fillBrandModels(id,items){document.getElementById(id).innerHTML=items.map(name=>'<div class="model-link"><b>'+name+'</b><a href="https://wa.me/'+phone+'?text='+encodeURIComponent("أرغب في معرفة سعر وتوفر "+name+" لدى المركز للاتصالات")+'" target="_blank" rel="noopener">استفسر عن السعر والتوفر ↗</a></div>').join("")}
+function render(){let q=document.getElementById("search").value.toLowerCase();fillBrandModels("iphoneModels",brandModels.iphone.filter(x=>x.toLowerCase().includes(q)));fillBrandModels("huaweiModels",brandModels.huawei.filter(x=>x.toLowerCase().includes(q)));fillBrandModels("samsungModels",brandModels.samsung.filter(x=>x.toLowerCase().includes(q)));document.getElementById("grid").innerHTML=products.filter(p=>!["آيفون","سامسونج","هواوي"].includes(p.cat)&&(p.name+" "+p.cat).toLowerCase().includes(q)).map(p=>'<article class="card"><div class="photo"><span class="product-icon">'+p.icon+'</span></div><div class="info"><small class="tag">'+p.cat+'</small><h3>'+p.name+'</h3><div class="price">'+money(p.price)+'</div><small style="display:block;color:#888;font-size:10px;margin-bottom:9px">سعر مرجعي من جرير — قابل للتغيير</small><a class="add" style="display:block;text-align:center;margin-bottom:7px" href="'+p.source+'" target="_blank" rel="noopener">تحقق من السعر والمواصفات</a><button class="add" onclick="add('+p.id+')">أضف إلى السلة ＋</button></div></article>').join("")}
+function add(id){let x=cart.find(p=>p.id===id);if(x)x.qty++;else cart.push({id,qty:1});document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.qty,0)}
 function openCart(){renderCart();document.getElementById("cart").classList.add("open")}function closeCart(){document.getElementById("cart").classList.remove("open")}
 function renderCart(){document.getElementById("items").innerHTML=cart.map(x=>{let p=products.find(y=>y.id===x.id);return '<div class="line"><span>'+p.name+' × '+x.qty+'</span><b>'+money(p.price==null?null:p.price*x.qty)+'</b><button onclick="removeItem('+x.id+')">حذف</button></div>'}).join("")||"<p>السلة فارغة</p>";document.getElementById("total").textContent=money(cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0))}
 function removeItem(id){cart=cart.filter(x=>x.id!==id);document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.qty,0);renderCart()}
