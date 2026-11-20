@@ -93,11 +93,92 @@ header{box-shadow:0 5px 22px #1118270a}
 .brand-shortcuts a:hover,.more-categories a:hover{border-color:#d7192d;color:#c91525}
 @media(max-width:760px){.primary-categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.primary-cat{min-height:116px;padding:12px 6px}.primary-cat i{font-size:28px}}
 @media(max-width:420px){.brand-shortcuts,.more-categories{gap:7px;padding:10px}.brand-shortcuts>span,.more-categories>span{width:100%}.brand-shortcuts a,.more-categories a{font-size:10px;padding:7px 9px}}
+</style><style>
+/* AL MARKAZ storefront refresh */
+:root{--red:#b5122b;--ink:#171923;--muted:#737887;--line:#e9eaf0}
+body{background:#f7f8fa;color:#191b24}
+.promo{background:#111827;color:#fff;padding:11px;font-size:12px}
+header{box-shadow:0 6px 24px #1018280d;border-bottom:0}
+.top{min-height:82px}
+.logo{border-radius:13px;background:linear-gradient(145deg,#c71935,#850c20);font-size:21px}
+.brand b{font-size:19px;letter-spacing:-.3px}
+.search input{border-radius:30px;background:#f5f6f8;padding:14px 20px}
+.tool{border-radius:50%;width:44px;height:44px}
+nav{background:#fff}
+.nav{gap:27px;padding:15px 0;font-weight:600}
+.nav a{font-size:12px}
+.hero{padding:25px 0 14px}
+.slides{height:410px;border-radius:22px;background:#171923;box-shadow:0 18px 40px #10182817}
+.slide{padding:6.5%;background:linear-gradient(105deg,#171923 0%,#252b3b 56%,#424b60 100%);color:#fff}
+.slide:nth-child(2){background:linear-gradient(105deg,#1a202d 0%,#353044 58%,#68515a 100%)}
+.slide:nth-child(3){background:linear-gradient(105deg,#171923 0%,#263b4b 58%,#526b7a 100%)}
+.copy{max-width:53%;position:relative;z-index:2}
+.eyebrow{color:#ffb5c0;letter-spacing:.5px}
+.copy h1{font-size:clamp(32px,4.8vw,56px);line-height:1.32;color:#fff;letter-spacing:-1px}
+.copy p{color:#e0e3ea;font-size:14px;max-width:440px}
+.cta{background:#c71935;border-radius:30px;padding:14px 30px;font-weight:bold}
+.art{width:43%;height:100%;display:flex;align-items:center;justify-content:center;margin-left:0;margin-right:auto;font-size:0;filter:none}
+.art img{width:min(100%,430px);height:330px;object-fit:contain;border-radius:18px;mix-blend-mode:screen;filter:drop-shadow(0 22px 24px #0007);animation:float 5s ease-in-out infinite}
+.dots{padding:13px}
+.trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:12px 0 25px}
+.trust-strip>div{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #eceef2;border-radius:13px;padding:15px}
+.trust-strip>div>b{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#fff0f2;font-size:20px}
+.trust-strip strong,.trust-strip small{display:block}
+.trust-strip strong{font-size:12px}
+.trust-strip small{font-size:10px;color:#858b98;margin-top:5px}
+main.wrap{background:#fff;border:1px solid #eff0f3;border-radius:20px;padding:8px 26px 25px;box-shadow:0 8px 30px #10182806}
+section{padding:30px 0}
+.heading{margin-bottom:20px}
+.heading h2{font-size:23px;letter-spacing:-.3px}
+.heading p{font-size:12px;color:#8a909c}
+.category-groups{gap:17px}
+.primary-categories{gap:14px}
+.primary-cat{min-height:145px;border-radius:15px;background:#fff;box-shadow:0 5px 18px #10182808}
+.primary-cat i{width:56px;height:56px;display:grid;place-items:center;background:#f7f7fa;border-radius:17px;font-size:29px}
+.primary-cat b{font-size:13px;margin-top:4px}
+.primary-cat small{font-size:10px}
+.brand-shortcuts,.more-categories{border-radius:13px;background:#fafbfc}
+.brand-shortcuts a,.more-categories a{background:#fff;padding:10px 15px;border-radius:25px}
+.brand-showcase{border:1px solid #eceef2;border-radius:17px;box-shadow:0 6px 20px #10182806}
+.brand-showcase .brand-head{background:#f8f9fb;padding:22px 25px}
+.brand-showcase .brand-photo{background:linear-gradient(145deg,#f7f8fa,#fff);height:255px}
+.brand-showcase .model-list{padding:18px}
+.model-link{border-radius:13px!important;overflow:hidden;background:#fff;transition:.2s}
+.model-link:hover{transform:translateY(-3px);box-shadow:0 9px 22px #10182810}
+.model-link img{background:#f8f9fb}
+.category-section{border-top:1px solid #eff0f3;padding-top:30px}
+.category-section .grid{gap:16px}
+.card{border:1px solid #eceef2;border-radius:15px;background:#fff}
+.card:hover{box-shadow:0 14px 28px #10182812}
+.photo{height:215px;background:#fafbfc;padding:18px}
+.info{padding:15px}
+.info h3{font-size:13px;line-height:1.8}
+.price{font-size:14px;color:#171923}
+.add{border-radius:25px;border-color:#c71935;color:#b5122b;font-weight:bold}
+.cart-add{border-radius:25px;background:#171923;border-color:#171923}
+.panel,.review{border-radius:14px}
+.service-hub{border-radius:20px}
+footer{background:#111827;margin-top:30px}
+.floating-wa{border-radius:16px}
+@media(max-width:850px){.trust-strip{grid-template-columns:repeat(2,1fr)}main.wrap{padding:8px 18px 22px}}
+@media(max-width:600px){
+ .hero{padding:13px 0 8px}.slides{height:300px;border-radius:17px}
+ .slide{padding:18px}.copy{max-width:62%}.copy h1{font-size:26px}.copy p{font-size:10px;line-height:1.9}
+ .art{width:39%}.art img{height:190px;width:100%;object-fit:contain}
+ .cta{padding:11px 17px;font-size:11px}
+ .trust-strip{gap:7px;padding:9px 0 17px}.trust-strip>div{padding:10px;gap:8px;border-radius:10px}.trust-strip>div>b{width:34px;height:34px;font-size:17px}.trust-strip strong{font-size:10px}.trust-strip small{font-size:9px}
+ main.wrap{width:96%;padding:4px 11px 18px;border-radius:15px}
+ section{padding:21px 0}.heading h2{font-size:18px}
+ .primary-cat{min-height:118px}.primary-cat i{width:45px;height:45px;font-size:25px}
+ .brand-showcase .brand-head{padding:15px}.brand-showcase .brand-photo{height:175px}
+ .category-section .grid{gap:9px}.photo{height:155px;padding:10px}.info{padding:10px}
+ .info h3{font-size:11px;min-height:42px}.product-actions .add,.cart-add{font-size:9px;padding:9px 3px}
+}
 </style></head><body>
 <div class="promo"><span>✦ عروض المركز للاتصالات ✦ أحدث الأجهزة والإكسسوارات ✦ أسعار مميزة ✦ اطلب الآن عبر واتساب 966550011909 ✦</span></div>
 <header><div class="wrap top"><a class="brand" href="#"><div class="logo">M</div><div><b>المركز للاتصالات</b><small>AL MARKAZ TELECOM</small></div></a><div class="search"><input id="search" placeholder="ابحث عن المنتجات..." oninput="render()"></div><div class="tools"><button class="tool" onclick="document.getElementById('search').focus()">⌕</button><button class="tool" onclick="openCart()">🛒<span class="count" id="count">0</span></button></div></div><nav><div class="wrap nav"><a href="#">الرئيسية</a><a href="#phones">الجوالات</a><a href="#tablets">التابلت والآيباد</a><a href="#tvs">الشاشات الذكية</a><a href="#watches">الساعات الذكية</a><a href="#gaming">PlayStation والألعاب</a><a href="#laptops">اللابتوبات</a><a href="#protection">بكجات الحماية</a><a href="#accessories">الإكسسوارات</a><a href="#mobile-repair">الصيانة</a><a href="#programming">البرمجة</a><a href="#contact">تواصل معنا</a></div></nav></header>
-<div class="wrap hero"><div class="slides"><article class="slide active"><div class="copy"><div class="eyebrow">✦ أهلاً بك في المركز للاتصالات</div><h1>أحدث التقنيات<br>تبدأ من هنا</h1><p>اكتشف أحدث أجهزة الجوال والإكسسوارات الأصلية بتجربة تسوق سهلة ومميزة.</p><a class="cta" href="#products">تسوق الآن</a></div><div class="art">📱</div></article><article class="slide"><div class="copy"><div class="eyebrow">✦ اختيارات تليق بك</div><h1>كل ما تحتاجه<br>في مكان واحد</h1><p>جوالات وسماعات وساعات ذكية وإكسسوارات مختارة بعناية.</p><a class="cta" href="#products">اكتشف المنتجات</a></div><div class="art">🎧</div></article><article class="slide"><div class="copy"><div class="eyebrow">✦ خدمة أسهل وأسرع</div><h1>تسوق براحتك<br>ونحن بخدمتك</h1><p>أرسل طلبك مباشرة عبر واتساب وتواصل مع فريق المركز.</p><a class="cta" href="https://wa.me/966550011909">تواصل معنا</a></div><div class="art">⌚</div></article></div><div class="dots"><button class="dot active" onclick="showSlide(0)"></button><button class="dot" onclick="showSlide(1)"></button><button class="dot" onclick="showSlide(2)"></button></div></div>
-<main class="wrap"><section><div class="heading"><div><h2>تسوق حسب القسم</h2><p>اختر القسم المناسب لك</p></div></div><div class="category-groups">
+<div class="wrap hero"><div class="slides"><article class="slide active"><div class="copy"><div class="eyebrow">✦ أهلاً بك في المركز للاتصالات</div><h1>أحدث التقنيات<br>تبدأ من هنا</h1><p>اكتشف أحدث أجهزة الجوال والإكسسوارات الأصلية بتجربة تسوق سهلة ومميزة.</p><a class="cta" href="#products">تسوق الآن</a></div><div class="art"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=900&q=85" alt="هاتف ذكي حديث"></div></article><article class="slide"><div class="copy"><div class="eyebrow">✦ اختيارات تليق بك</div><h1>كل ما تحتاجه<br>في مكان واحد</h1><p>جوالات وسماعات وساعات ذكية وإكسسوارات مختارة بعناية.</p><a class="cta" href="#products">اكتشف المنتجات</a></div><div class="art"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85" alt="سماعات لاسلكية"></div></article><article class="slide"><div class="copy"><div class="eyebrow">✦ خدمة أسهل وأسرع</div><h1>تسوق براحتك<br>ونحن بخدمتك</h1><p>أرسل طلبك مباشرة عبر واتساب وتواصل مع فريق المركز.</p><a class="cta" href="https://wa.me/966550011909">تواصل معنا</a></div><div class="art"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85" alt="ساعة ذكية"></div></article></div><div class="dots"><button class="dot active" onclick="showSlide(0)"></button><button class="dot" onclick="showSlide(1)"></button><button class="dot" onclick="showSlide(2)"></button></div></div>
+<div class="trust-strip wrap"><div><b>🚚</b><span><strong>تجربة تسوق سهلة</strong><small>اطلب واستفسر بكل سهولة</small></span></div><div><b>💬</b><span><strong>تواصل مباشر</strong><small>خدمة العملاء عبر واتساب</small></span></div><div><b>🛠️</b><span><strong>خدمات الصيانة</strong><small>صيانة متنقلة وبرمجة</small></span></div><div><b>🛍️</b><span><strong>أقسام متنوعة</strong><small>أجهزة وإكسسوارات وتقنية</small></span></div></div><main class="wrap"><section><div class="heading"><div><h2>تسوق حسب القسم</h2><p>اختر القسم المناسب لك</p></div></div><div class="category-groups">
 <div class="primary-categories">
 <a class="cat primary-cat" href="#phones"><i>📱</i><b>الجوالات</b><small>Apple · Samsung · HUAWEI</small></a>
 <a class="cat primary-cat" href="#tablets"><i>📲</i><b>التابلت والآيباد</b><small>iPad والأجهزة اللوحية</small></a>
