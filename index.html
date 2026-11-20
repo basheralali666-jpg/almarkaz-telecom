@@ -108,7 +108,7 @@ header{box-shadow:0 5px 22px #1118270a}
 <a class="cat primary-cat" href="#protection"><i>🛡️</i><b>بكجات الحماية</b><small>كفرات وحماية الشاشات</small></a>
 <a class="cat primary-cat" href="#accessories"><i>🔌</i><b>الإكسسوارات</b><small>شواحن وسماعات وملحقات</small></a>
 </div>
-<div class="brand-shortcuts"><span>تصفح حسب الماركة</span><a href="#iphone">Apple iPhone</a><a href="#huawei">HUAWEI</a><a href="#samsung">Samsung Galaxy</a></div>
+<div class="brand-shortcuts"><span>تصفح حسب الماركة</span><a href="#iphone">Apple iPhone</a><a href="#ipad">Apple iPad</a><a href="#huawei">HUAWEI</a><a href="#samsung">Samsung Galaxy</a></div>
 <div class="more-categories"><span>أقسام إضافية</span><a href="#pc-accessories">ملحقات الكمبيوتر</a><a href="#screens">الشاشات والبروجكتر</a><a href="#cameras">الكاميرات</a><a href="#printers">الطابعات</a><a href="#smart-home">المنزل الذكي</a><a href="#audio">السماعات والصوتيات</a></div>
 </div></section>
 
@@ -127,6 +127,11 @@ header{box-shadow:0 5px 22px #1118270a}
  <div class="brand-head"><div><h2>Apple iPhone</h2><p>موديلات آيفون مرتبة من الأحدث إلى الأقدم — صور من صفحات Apple ومصادر المنتجات</p></div><span style="color:#777;font-size:11px">صور ومعلومات تعريفية داخل متجر المركز</span></div>
  <div class="brand-photo"><img src="https://www.apple.com/v/iphone-18-pro/c/images/overview/aio/hero__elo7tt0mnqy6_large.jpg" alt="Apple iPhone 17 Pro Max Silver — صورة المنتج الرسمية" loading="lazy" onerror="this.style.display=&quot;none&quot;;this.parentElement.classList.add(&quot;image-failed&quot;)"></div><p class="photo-note">iPhone 18 Pro — صورة من صفحة Apple الرسمية</p>
  <div class="model-list" id="iphoneModels"></div>
+</section>
+<section class="brand-showcase" id="ipad">
+ <div class="brand-head"><div><h2>Apple iPad</h2><p>آيباد برو وآيباد إير — تصفح الأجهزة اللوحية حسب الموديل</p></div><span style="color:#777;font-size:11px">قسم مستقل للأجهزة اللوحية</span></div>
+ <div class="brand-photo"><img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="Apple iPad Pro 13-inch" loading="lazy" onerror="this.style.display=&quot;none&quot;;this.parentElement.classList.add(&quot;image-failed&quot;)"></div>
+ <div class="model-list" id="ipadModels"></div>
 </section>
 <section class="brand-showcase" id="huawei">
  <div class="brand-head"><div><h2>هواتف HUAWEI</h2><p>سلاسل Pura وMate وnova — صور من صفحات HUAWEI الرسمية</p></div><span style="color:#777;font-size:11px">صور ومعلومات تعريفية داخل متجر المركز</span></div>
@@ -230,6 +235,7 @@ const phone="966550011909",products=[
 {id:70,name:"iPhone Tempered Glass Protector",cat:"حمايات",price:null,icon:"🛡️"},{id:71,name:"Apple Watch Ultra 3",cat:"ساعات ذكية",price:null,icon:"⌚"}
 ];let cart=[];
 function money(n){return n==null?"السعر عند الطلب":n.toLocaleString("en-US")+" ر.س"}
+const tabletModels=["Apple iPad Pro 13-inch","Apple iPad Air 11-inch","Samsung Galaxy Tab S11 Ultra","HUAWEI MatePad Pro Max 13.2"];
 const brandModels={
 iphone:["iPhone Duo","iPhone 18 Pro Max","iPhone 18 Pro","iPhone Air","iPhone 17 Pro Max","iPhone 17 Pro","iPhone 17","iPhone 17e","iPhone 16"],
 huawei:["HUAWEI Pura 90s Pro Max","HUAWEI Pura 90s Pro","HUAWEI Pura 80 Ultra","HUAWEI Pura 80 Pro","HUAWEI Pura 80","HUAWEI Mate 80 Pro","HUAWEI Mate X7","HUAWEI Mate XT ULTIMATE DESIGN","HUAWEI Mate X6","HUAWEI nova 16s Pro","HUAWEI nova 16s","HUAWEI nova 15 Max","HUAWEI nova 14 Pro","HUAWEI nova 14","HUAWEI nova 14i","HUAWEI nova Y74","HUAWEI nova Y73"],
@@ -258,7 +264,7 @@ function productCard(p){
 let image=officialModelImages[p.name];
 return '<article class="card"><div class="photo">'+(image?'<img src="'+image+'" alt="'+p.name+'" loading="lazy" onerror="this.style.display=&quot;none&quot;;this.parentElement.classList.add(&quot;image-failed&quot;)" style="width:100%;height:100%;object-fit:contain">':'<span class="no-model-photo">صورة المنتج قيد الإضافة</span>')+'</div><div class="info"><span class="tag">'+p.cat+'</span><h3>'+p.name+'</h3><div class="price">'+money(p.price)+'</div><div class="product-actions"><button class="add" onclick="askProduct('+p.id+')">استفسر عبر واتساب</button><button class="cart-add" onclick="add('+p.id+')">أضف للسلة +</button></div></div></article>';
 }
-function render(){let q=(document.getElementById("search").value+" "+(document.getElementById("catalogSearch")?.value||"")).trim().toLowerCase();let filter=document.getElementById("categoryFilter")?.value||"all";let sort=document.getElementById("sortProducts")?.value||"default";fillBrandModels("iphoneModels",brandModels.iphone.filter(x=>x.toLowerCase().includes(q)));fillBrandModels("huaweiModels",brandModels.huawei.filter(x=>x.toLowerCase().includes(q)));fillBrandModels("samsungModels",brandModels.samsung.filter(x=>x.toLowerCase().includes(q)));document.getElementById("categorySections").innerHTML=storeSections.map(s=>{let found=products.filter(p=>s.cats.includes(p.cat)&&(p.name+" "+p.cat).toLowerCase().includes(q)&&(filter==="all"||p.cat===filter));if(sort==="name")found.sort((a,b)=>a.name.localeCompare(b.name));if(sort==="price")found.sort((a,b)=>(a.price??Infinity)-(b.price??Infinity));return '<section class="category-section" id="'+s.id+'"><div class="heading"><div><h2>'+s.icon+' '+s.title+'</h2><p>'+s.subtitle+'</p></div><span style="font-size:11px;color:#999">'+found.length+' منتجات</span></div>'+(found.length?'<div class="grid">'+found.map(productCard).join("")+'</div>':'<div class="panel" style="text-align:center;color:#777;font-size:13px">لا توجد منتجات مطابقة حالياً. للاستفسار عن التوفر اطلب المساعدة من المركز عبر واتساب.</div>')+'</section>'}).join("")}
+function render(){let q=(document.getElementById("search").value+" "+(document.getElementById("catalogSearch")?.value||"")).trim().toLowerCase();let filter=document.getElementById("categoryFilter")?.value||"all";let sort=document.getElementById("sortProducts")?.value||"default";fillBrandModels("iphoneModels",brandModels.iphone.filter(x=>x.toLowerCase().includes(q)));fillBrandModels("ipadModels",tabletModels.filter(x=>x.toLowerCase().includes(q)));fillBrandModels("huaweiModels",brandModels.huawei.filter(x=>x.toLowerCase().includes(q)));fillBrandModels("samsungModels",brandModels.samsung.filter(x=>x.toLowerCase().includes(q)));document.getElementById("categorySections").innerHTML=storeSections.map(s=>{let found=products.filter(p=>s.cats.includes(p.cat)&&(p.name+" "+p.cat).toLowerCase().includes(q)&&(filter==="all"||p.cat===filter));if(sort==="name")found.sort((a,b)=>a.name.localeCompare(b.name));if(sort==="price")found.sort((a,b)=>(a.price??Infinity)-(b.price??Infinity));return '<section class="category-section" id="'+s.id+'"><div class="heading"><div><h2>'+s.icon+' '+s.title+'</h2><p>'+s.subtitle+'</p></div><span style="font-size:11px;color:#999">'+found.length+' منتجات</span></div>'+(found.length?'<div class="grid">'+found.map(productCard).join("")+'</div>':'<div class="panel" style="text-align:center;color:#777;font-size:13px">لا توجد منتجات مطابقة حالياً. للاستفسار عن التوفر اطلب المساعدة من المركز عبر واتساب.</div>')+'</section>'}).join("")}
 function sendServiceRequest(event,type){
 event.preventDefault();
 const form=event.currentTarget, data=new FormData(form);
