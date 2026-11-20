@@ -116,6 +116,25 @@ samsung:["Galaxy S26 Ultra","Galaxy S26+","Galaxy S26","Galaxy S26 FE","Galaxy Z
 };
 const officialModelImages={"iPhone 17 Pro Max":"https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-max-finish-select-silver-202509?wid=1200&hei=1200&fmt=png-alpha","HUAWEI Pura 80 Pro":"https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/phones/pura80-pro/images/kv/kv-img.jpg","Galaxy S26 Ultra":"https://api.samsungmobilepress.com/api/v1/file/F0079F4C3B320974850EA001FDD3463F37B966748BDE494FE62748327134D1DCE64158DC226213A89FED047E03845F28FF11247D0F5F079675A5BA7EC119A8674E479D8C6611F18CA1274AB23544EAD1D59F28A1AE5591ADDC088A2826AA2F0B97EDE750BCA1D4633D188D39711E6B63A0AF87D47190E94DC73815539D17511B3AB052BB115C35872B3F0EAC1BAD3CFD"};
 function fillBrandModels(id,items){document.getElementById(id).innerHTML=items.map(name=>'<div class="model-link">'+(officialModelImages[name]?'<img src="'+officialModelImages[name]+'" alt="'+name+' — صورة رسمية" loading="lazy">':'<div class="no-model-photo">الصورة الأصلية قيد الإضافة</div>')+'<b>'+name+'</b><a href="https://wa.me/'+phone+'?text='+encodeURIComponent("أرغب في معرفة سعر وتوفر "+name+" لدى المركز للاتصالات")+'" target="_blank" rel="noopener">استفسر عن السعر والتوفر ↗</a></div>').join("")}
+
+const storeSections=[
+{id:"laptops",title:"اللابتوبات",icon:"💻",subtitle:"أجهزة الكمبيوتر المحمولة",cats:["لابتوبات"]},
+{id:"tablets",title:"التابلت والآيباد",icon:"📲",subtitle:"أجهزة لوحية للعمل والترفيه",cats:["تابلت","آيباد"]},
+{id:"tvs",title:"التلفزيونات",icon:"📺",subtitle:"شاشات التلفزيون",cats:["تلفزيونات"]},
+{id:"watches",title:"الساعات الذكية",icon:"⌚",subtitle:"ساعات وأساور ذكية",cats:["ساعات ذكية"]},
+{id:"pc-accessories",title:"ملحقات الكمبيوتر",icon:"🖥️",subtitle:"ملحقات وأجهزة الكمبيوتر",cats:["ملحقات كمبيوتر"]},
+{id:"screens",title:"الشاشات والبروجكتر",icon:"📽️",subtitle:"شاشات العرض وأجهزة البروجكتر",cats:["بروجكترات","شاشات"]},
+{id:"gaming",title:"الألعاب",icon:"🎮",subtitle:"أجهزة الألعاب وملحقاتها",cats:["ألعاب"]},
+{id:"cameras",title:"الكاميرات",icon:"📷",subtitle:"كاميرات التصوير",cats:["كاميرات"]},
+{id:"printers",title:"الطابعات",icon:"🖨️",subtitle:"طابعات منزلية ومكتبية",cats:["طابعات"]},
+{id:"smart-home",title:"المنزل الذكي",icon:"🏠",subtitle:"أجهزة المنزل الذكي",cats:["منزل ذكي"]},
+{id:"audio",title:"السماعات والصوتيات",icon:"🎧",subtitle:"سماعات وأجهزة صوتية",cats:["سماعات","صوتيات"]},
+{id:"accessories",title:"الشواحن والباوربانك",icon:"🔌",subtitle:"شواحن وبطاريات متنقلة",cats:["شواحن","باوربانك"]},
+{id:"protection",title:"الكفرات والحمايات",icon:"🛡️",subtitle:"حماية الأجهزة وملحقاتها",cats:["كفرات","حمايات"]}
+];
+function productCard(p){
+return '<article class="card"><div class="photo"><span class="product-icon">'+p.icon+'</span></div><div class="info"><span class="tag">'+p.cat+'</span><h3>'+p.name+'</h3><div class="price">'+money(p.price)+'</div><button class="add" onclick="askProduct('+p.id+')">استفسر واطلب عبر واتساب</button></div></article>';
+}
 function render(){let q=document.getElementById("search").value.toLowerCase();fillBrandModels("iphoneModels",brandModels.iphone.filter(x=>x.toLowerCase().includes(q)));fillBrandModels("huaweiModels",brandModels.huawei.filter(x=>x.toLowerCase().includes(q)));fillBrandModels("samsungModels",brandModels.samsung.filter(x=>x.toLowerCase().includes(q)));document.getElementById("categorySections").innerHTML=storeSections.map(s=>{let found=products.filter(p=>s.cats.includes(p.cat)&&(p.name+" "+p.cat).toLowerCase().includes(q));return '<section class="category-section" id="'+s.id+'"><div class="heading"><div><h2>'+s.icon+' '+s.title+'</h2><p>'+s.subtitle+'</p></div><span style="font-size:11px;color:#999">'+found.length+' منتجات</span></div>'+(found.length?'<div class="grid">'+found.map(productCard).join("")+'</div>':'<div class="panel" style="text-align:center;color:#777;font-size:13px">سيتم إضافة المنتجات والصور والأسعار لهذا القسم قريباً. للاستفسار عن المتوفر حالياً تواصل مع المركز عبر واتساب.</div>')+'</section>'}).join("")}
 function askProduct(id){let p=products.find(x=>x.id===id);window.open("https://wa.me/"+phone+"?text="+encodeURIComponent("السلام عليكم، أريد الاستفسار عن "+p.name+" لدى المركز للاتصالات، هل المنتج متوفر وما سعره؟"),"_blank")}
 function add(id){let x=cart.find(p=>p.id===id);if(x)x.qty++;else cart.push({id,qty:1});document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.qty,0)}
