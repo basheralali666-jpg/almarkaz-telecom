@@ -80,25 +80,36 @@ header{box-shadow:0 5px 22px #1118270a}
 .floating-wa:hover{transform:translateY(-3px)}
 .floating-wa b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#ffffff22;font-size:21px}
 @media(max-width:600px){.floating-wa{bottom:14px;left:12px;padding:7px 11px 7px 8px}.floating-wa b{width:31px;height:31px}}
+</style><style>
+.category-groups{display:grid;gap:15px}
+.primary-categories{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.primary-cat{min-height:130px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:linear-gradient(145deg,#fff,#f7f8fb);border:1px solid #e8eaf0;box-shadow:0 4px 14px #15182706}
+.primary-cat i{font-size:32px;margin:0 0 5px}
+.primary-cat b{font-size:13px}
+.primary-cat small{font-size:10px;color:#858b98;line-height:1.6}
+.brand-shortcuts,.more-categories{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:12px 14px;border:1px solid #eceef2;border-radius:10px;background:#fff}
+.brand-shortcuts>span,.more-categories>span{font-size:11px;font-weight:bold;color:#555e6d;margin-left:5px}
+.brand-shortcuts a,.more-categories a{padding:8px 12px;border-radius:22px;background:#f6f7f9;border:1px solid #e9eaf0;font-size:11px;color:#3b4250}
+.brand-shortcuts a:hover,.more-categories a:hover{border-color:#d7192d;color:#c91525}
+@media(max-width:760px){.primary-categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.primary-cat{min-height:116px;padding:12px 6px}.primary-cat i{font-size:28px}}
+@media(max-width:420px){.brand-shortcuts,.more-categories{gap:7px;padding:10px}.brand-shortcuts>span,.more-categories>span{width:100%}.brand-shortcuts a,.more-categories a{font-size:10px;padding:7px 9px}}
 </style></head><body>
 <div class="promo"><span>✦ عروض المركز للاتصالات ✦ أحدث الأجهزة والإكسسوارات ✦ أسعار مميزة ✦ اطلب الآن عبر واتساب 966550011909 ✦</span></div>
-<header><div class="wrap top"><a class="brand" href="#"><div class="logo">M</div><div><b>المركز للاتصالات</b><small>AL MARKAZ TELECOM</small></div></a><div class="search"><input id="search" placeholder="ابحث عن المنتجات..." oninput="render()"></div><div class="tools"><button class="tool" onclick="document.getElementById('search').focus()">⌕</button><button class="tool" onclick="openCart()">🛒<span class="count" id="count">0</span></button></div></div><nav><div class="wrap nav"><a href="#">الرئيسية</a><a href="#iphone">الآيفون</a><a href="#huawei">هواوي</a><a href="#samsung">سامسونج</a><a href="#laptops">اللابتوبات</a><a href="#tablets">التابلت</a><a href="#watches">الساعات</a><a href="#audio">السماعات</a><a href="#accessories">الإكسسوارات</a><a href="#gaming">الألعاب</a><a href="#mobile-repair">الصيانة المتنقلة</a><a href="#programming">البرمجة</a><a href="#branches">فروعنا</a><a href="#contact">تواصل معنا</a></div></nav></header>
+<header><div class="wrap top"><a class="brand" href="#"><div class="logo">M</div><div><b>المركز للاتصالات</b><small>AL MARKAZ TELECOM</small></div></a><div class="search"><input id="search" placeholder="ابحث عن المنتجات..." oninput="render()"></div><div class="tools"><button class="tool" onclick="document.getElementById('search').focus()">⌕</button><button class="tool" onclick="openCart()">🛒<span class="count" id="count">0</span></button></div></div><nav><div class="wrap nav"><a href="#">الرئيسية</a><a href="#phones">الجوالات</a><a href="#tablets">التابلت والآيباد</a><a href="#tvs">الشاشات الذكية</a><a href="#watches">الساعات الذكية</a><a href="#gaming">PlayStation والألعاب</a><a href="#laptops">اللابتوبات</a><a href="#protection">بكجات الحماية</a><a href="#accessories">الإكسسوارات</a><a href="#mobile-repair">الصيانة</a><a href="#programming">البرمجة</a><a href="#contact">تواصل معنا</a></div></nav></header>
 <div class="wrap hero"><div class="slides"><article class="slide active"><div class="copy"><div class="eyebrow">✦ أهلاً بك في المركز للاتصالات</div><h1>أحدث التقنيات<br>تبدأ من هنا</h1><p>اكتشف أحدث أجهزة الجوال والإكسسوارات الأصلية بتجربة تسوق سهلة ومميزة.</p><a class="cta" href="#products">تسوق الآن</a></div><div class="art">📱</div></article><article class="slide"><div class="copy"><div class="eyebrow">✦ اختيارات تليق بك</div><h1>كل ما تحتاجه<br>في مكان واحد</h1><p>جوالات وسماعات وساعات ذكية وإكسسوارات مختارة بعناية.</p><a class="cta" href="#products">اكتشف المنتجات</a></div><div class="art">🎧</div></article><article class="slide"><div class="copy"><div class="eyebrow">✦ خدمة أسهل وأسرع</div><h1>تسوق براحتك<br>ونحن بخدمتك</h1><p>أرسل طلبك مباشرة عبر واتساب وتواصل مع فريق المركز.</p><a class="cta" href="https://wa.me/966550011909">تواصل معنا</a></div><div class="art">⌚</div></article></div><div class="dots"><button class="dot active" onclick="showSlide(0)"></button><button class="dot" onclick="showSlide(1)"></button><button class="dot" onclick="showSlide(2)"></button></div></div>
-<main class="wrap"><section><div class="heading"><div><h2>تسوق حسب القسم</h2><p>اختر القسم المناسب لك</p></div></div><div class="categories">
-<a class="cat" href="#iphone"><i>📱</i><b>آيفون</b></a><a class="cat" href="#huawei"><i>📱</i><b>هواوي</b></a><a class="cat" href="#samsung"><i>📱</i><b>سامسونج</b></a>
-<a class="cat" href="#laptops"><i>💻</i><b>اللابتوبات</b></a>
-<a class="cat" href="#tvs"><i>📺</i><b>التلفزيونات</b></a>
-<a class="cat" href="#watches"><i>⌚</i><b>الساعات الذكية</b></a>
-<a class="cat" href="#pc-accessories"><i>🖥️</i><b>ملحقات الكمبيوتر</b></a>
-<a class="cat" href="#screens"><i>📽️</i><b>الشاشات والبروجكتر</b></a>
-<a class="cat" href="#gaming"><i>🎮</i><b>الألعاب</b></a>
-<a class="cat" href="#cameras"><i>📷</i><b>الكاميرات</b></a>
-<a class="cat" href="#printers"><i>🖨️</i><b>الطابعات</b></a>
-<a class="cat" href="#smart-home"><i>🏠</i><b>المنزل الذكي</b></a>
-<a class="cat" href="#audio"><i>🎧</i><b>السماعات والصوتيات</b></a>
-<a class="cat" href="#tablets"><i>📲</i><b>التابلت والآيباد</b></a>
-<a class="cat" href="#accessories"><i>🔌</i><b>الشواحن والباوربانك</b></a>
-<a class="cat" href="#protection"><i>🛡️</i><b>الكفرات والحمايات</b></a>
+<main class="wrap"><section><div class="heading"><div><h2>تسوق حسب القسم</h2><p>اختر القسم المناسب لك</p></div></div><div class="category-groups">
+<div class="primary-categories">
+<a class="cat primary-cat" href="#phones"><i>📱</i><b>الجوالات</b><small>Apple · Samsung · HUAWEI</small></a>
+<a class="cat primary-cat" href="#tablets"><i>📲</i><b>التابلت والآيباد</b><small>iPad والأجهزة اللوحية</small></a>
+<a class="cat primary-cat" href="#tvs"><i>📺</i><b>الشاشات الذكية</b><small>تلفزيونات وعرض</small></a>
+<a class="cat primary-cat" href="#watches"><i>⌚</i><b>الساعات الذكية</b><small>Apple Watch وغيرها</small></a>
+<a class="cat primary-cat" href="#gaming"><i>🎮</i><b>PlayStation والألعاب</b><small>أجهزة وملحقات الألعاب</small></a>
+<a class="cat primary-cat" href="#laptops"><i>💻</i><b>اللابتوبات</b><small>أجهزة للعمل والدراسة</small></a>
+<a class="cat primary-cat" href="#protection"><i>🛡️</i><b>بكجات الحماية</b><small>كفرات وحماية الشاشات</small></a>
+<a class="cat primary-cat" href="#accessories"><i>🔌</i><b>الإكسسوارات</b><small>شواحن وسماعات وملحقات</small></a>
+</div>
+<div class="brand-shortcuts"><span>تصفح حسب الماركة</span><a href="#iphone">Apple iPhone</a><a href="#huawei">HUAWEI</a><a href="#samsung">Samsung Galaxy</a></div>
+<div class="more-categories"><span>أقسام إضافية</span><a href="#pc-accessories">ملحقات الكمبيوتر</a><a href="#screens">الشاشات والبروجكتر</a><a href="#cameras">الكاميرات</a><a href="#printers">الطابعات</a><a href="#smart-home">المنزل الذكي</a><a href="#audio">السماعات والصوتيات</a></div>
 </div></section>
 
 <style>
@@ -127,7 +138,7 @@ header{box-shadow:0 5px 22px #1118270a}
  <div class="brand-photo"><img src="https://images.samsung.com/sa/smartphones/galaxy-s26-ultra/images/galaxy-s26-ultra-features-kv.jpg?imbypass=true" alt="Samsung Galaxy S26 Ultra — صورة المنتج الرسمية" loading="lazy" onerror="this.style.display=&quot;none&quot;;this.parentElement.classList.add(&quot;image-failed&quot;)"></div><p class="photo-note">Samsung Galaxy S26 Ultra — صورة من صفحة Samsung السعودية</p>
  <div class="model-list" id="samsungModels"></div>
 </section>
-<section id="products"><div class="heading"><div><h2>أقسام المتجر</h2><p>كل قسم مستقل بمنتجاته — اختر القسم للتصفح</p></div></div><div class="catalog-tools"><input id="catalogSearch" placeholder="ابحث داخل المنتجات..." oninput="render()"><select id="sortProducts" onchange="render()"><option value="default">ترتيب المنتجات</option><option value="name">الاسم: أ إلى ي</option><option value="price">السعر: الأقل أولاً</option></select><select id="categoryFilter" onchange="render()"><option value="all">كل الأقسام</option><option value="جوالات">الجوالات</option><option value="آيفون">آيفون</option><option value="سامسونج">سامسونج</option><option value="هواوي">هواوي</option><option value="تابلت">التابلت</option><option value="آيباد">الآيباد</option><option value="تلفزيونات">التلفزيونات</option><option value="لابتوبات">اللابتوبات</option><option value="ساعات ذكية">الساعات الذكية</option><option value="تلفزيونات">التلفزيونات</option><option value="ملحقات كمبيوتر">ملحقات الكمبيوتر</option><option value="شاشات">الشاشات</option><option value="بروجكترات">البروجكتر</option><option value="كاميرات">الكاميرات</option><option value="طابعات">الطابعات</option><option value="منزل ذكي">المنزل الذكي</option><option value="ألعاب">الألعاب</option><option value="سماعات">السماعات</option><option value="صوتيات">الصوتيات</option><option value="شواحن">الشواحن</option><option value="باوربانك">الباوربانك</option><option value="كفرات">الكفرات</option><option value="حمايات">الحمايات</option></select></div><div id="categorySections"></div></section>
+<section id="products"><div class="heading"><div><h2>منتجات المركز حسب القسم</h2><p>ابدأ بالقسم المناسب، ثم اختر الماركة والموديل</p></div></div><div class="catalog-tools"><input id="catalogSearch" placeholder="ابحث داخل المنتجات..." oninput="render()"><select id="sortProducts" onchange="render()"><option value="default">ترتيب المنتجات</option><option value="name">الاسم: أ إلى ي</option><option value="price">السعر: الأقل أولاً</option></select><select id="categoryFilter" onchange="render()"><option value="all">كل الأقسام</option><option value="جوالات">الجوالات</option><option value="آيفون">آيفون</option><option value="سامسونج">سامسونج</option><option value="هواوي">هواوي</option><option value="تابلت">التابلت</option><option value="آيباد">الآيباد</option><option value="تلفزيونات">التلفزيونات</option><option value="لابتوبات">اللابتوبات</option><option value="ساعات ذكية">الساعات الذكية</option><option value="تلفزيونات">التلفزيونات</option><option value="ملحقات كمبيوتر">ملحقات الكمبيوتر</option><option value="شاشات">الشاشات</option><option value="بروجكترات">البروجكتر</option><option value="كاميرات">الكاميرات</option><option value="طابعات">الطابعات</option><option value="منزل ذكي">المنزل الذكي</option><option value="ألعاب">الألعاب</option><option value="سماعات">السماعات</option><option value="صوتيات">الصوتيات</option><option value="شواحن">الشواحن</option><option value="باوربانك">الباوربانك</option><option value="كفرات">الكفرات</option><option value="حمايات">الحمايات</option></select></div><div id="categorySections"></div></section>
 <section id="branches"><div class="panel"><div class="heading"><div><h2>فروع المركز للاتصالات</h2><p>جاهزين لخدمتكم ونرحب باستفساراتكم</p></div></div><div class="pills"><div class="pill">📍 تواصل معنا لمعرفة موقع الفرع</div><div class="pill">📦 خدمة الطلبات والتوصيل</div><div class="pill">☎️ خدمة العملاء</div></div></div></section>
 <section class="service-hub" id="mobile-repair">
 <div class="service-intro"><span class="service-kicker">AL MARKAZ • ON-DEMAND CARE</span><h2>الصيانة المتنقلة</h2><p>اطلب فني صيانة يصل إلى موقعك — أرسل بيانات الجهاز والعطل وسيتواصل معك فريق المركز لتأكيد إمكانية الخدمة والموعد.</p><div class="service-points"><span>✓ طلب خدمة من الموقع</span><span>✓ تحديد نوع الجهاز والعطل</span><span>✓ تأكيد الموعد والتغطية عبر واتساب</span></div></div>
@@ -228,20 +239,20 @@ const officialModelImages={"iPhone 17 Pro Max":"https://re.now/cdn/shop/files/OP
 function fillBrandModels(id,items){document.getElementById(id).innerHTML=items.map(name=>'<article class="card model-link">'+(officialModelImages[name]?'<img src="'+officialModelImages[name]+'" alt="'+name+'" loading="lazy" onerror="this.style.display=&quot;none&quot;;this.parentElement.classList.add(&quot;image-failed&quot;)">':'<div class="no-model-photo">صورة المنتج قيد الإضافة</div>')+'<b>'+name+'</b><div class="price">السعر عند الطلب</div><a href="https://wa.me/'+phone+'?text='+encodeURIComponent("أرغب في معرفة سعر وتوفر "+name+" لدى المركز للاتصالات")+'" target="_blank" rel="noopener">استفسر عن السعر ↗</a></article>').join("")}
 
 const storeSections=[
-{id:"phones",title:"الجوالات والهواتف الذكية",icon:"📱",subtitle:"أحدث أجهزة Apple وSamsung وHUAWEI",cats:["جوالات","آيفون","سامسونج","هواوي"]},
+{id:"phones",title:"الجوالات",icon:"📱",subtitle:"أجهزة Apple وSamsung وHUAWEI",cats:["جوالات","آيفون","سامسونج","هواوي"]},
+{id:"tablets",title:"التابلت والآيباد",icon:"📲",subtitle:"أجهزة iPad والأجهزة اللوحية",cats:["تابلت","آيباد"]},
+{id:"tvs",title:"الشاشات الذكية والتلفزيونات",icon:"📺",subtitle:"تلفزيونات وشاشات منزلية",cats:["تلفزيونات"]},
+{id:"watches",title:"الساعات الذكية",icon:"⌚",subtitle:"Apple Watch والساعات الذكية",cats:["ساعات ذكية"]},
+{id:"gaming",title:"PlayStation والألعاب",icon:"🎮",subtitle:"أجهزة الألعاب وملحقاتها",cats:["ألعاب"]},
 {id:"laptops",title:"اللابتوبات",icon:"💻",subtitle:"أجهزة الكمبيوتر المحمولة",cats:["لابتوبات"]},
-{id:"tablets",title:"التابلت والآيباد",icon:"📲",subtitle:"أجهزة لوحية للعمل والترفيه",cats:["تابلت","آيباد"]},
-{id:"tvs",title:"التلفزيونات",icon:"📺",subtitle:"شاشات التلفزيون",cats:["تلفزيونات"]},
-{id:"watches",title:"الساعات الذكية",icon:"⌚",subtitle:"ساعات وأساور ذكية",cats:["ساعات ذكية"]},
+{id:"protection",title:"بكجات الحماية والكفرات",icon:"🛡️",subtitle:"حماية الأجهزة وملحقاتها",cats:["كفرات","حمايات"]},
+{id:"accessories",title:"الإكسسوارات والشواحن",icon:"🔌",subtitle:"شواحن وباوربانك وملحقات",cats:["شواحن","باوربانك"]},
 {id:"pc-accessories",title:"ملحقات الكمبيوتر",icon:"🖥️",subtitle:"ملحقات وأجهزة الكمبيوتر",cats:["ملحقات كمبيوتر"]},
 {id:"screens",title:"الشاشات والبروجكتر",icon:"📽️",subtitle:"شاشات العرض وأجهزة البروجكتر",cats:["بروجكترات","شاشات"]},
-{id:"gaming",title:"الألعاب",icon:"🎮",subtitle:"أجهزة الألعاب وملحقاتها",cats:["ألعاب"]},
 {id:"cameras",title:"الكاميرات",icon:"📷",subtitle:"كاميرات التصوير",cats:["كاميرات"]},
 {id:"printers",title:"الطابعات",icon:"🖨️",subtitle:"طابعات منزلية ومكتبية",cats:["طابعات"]},
 {id:"smart-home",title:"المنزل الذكي",icon:"🏠",subtitle:"أجهزة المنزل الذكي",cats:["منزل ذكي"]},
-{id:"audio",title:"السماعات والصوتيات",icon:"🎧",subtitle:"سماعات وأجهزة صوتية",cats:["سماعات","صوتيات"]},
-{id:"accessories",title:"الشواحن والباوربانك",icon:"🔌",subtitle:"شواحن وبطاريات متنقلة",cats:["شواحن","باوربانك"]},
-{id:"protection",title:"الكفرات والحمايات",icon:"🛡️",subtitle:"حماية الأجهزة وملحقاتها",cats:["كفرات","حمايات"]}
+{id:"audio",title:"السماعات والصوتيات",icon:"🎧",subtitle:"سماعات وأجهزة صوتية",cats:["سماعات","صوتيات"]}
 ];
 function productCard(p){
 let image=officialModelImages[p.name];
