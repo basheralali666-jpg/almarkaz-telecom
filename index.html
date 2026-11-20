@@ -1,176 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b0b0b">
+<meta name="theme-color" content="#fff0f3">
 <title>المركز للاتصالات | AL MARKAZ TELECOM</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#0b0b0b;color:#fff;font-family:Tahoma,Arial,sans-serif}
-:root{--gold:#d8b568;--panel:#171717;--line:#393329}
-.wrap{width:92%;max-width:1150px;margin:auto}
-header{background:#111;border-bottom:1px solid var(--line);padding:15px 0;position:sticky;top:0;z-index:5}
-.head{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{width:45px;height:45px;border:1px solid var(--gold);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-size:26px;font-weight:bold}
-.brand h2{font-size:17px;margin:0}
-.brand small{color:var(--gold);letter-spacing:2px;font-size:10px}
-button,a{cursor:pointer}
-.btn{border:1px solid var(--gold);background:transparent;color:var(--gold);padding:11px 15px;border-radius:9px;text-decoration:none;font-size:13px}
-.gold{background:var(--gold);color:#111;font-weight:bold}
-.hero{padding:65px 0 45px;text-align:center;background:radial-gradient(ellipse at center,#403019 0%,#0b0b0b 70%)}
-.hero .eyebrow{color:var(--gold);font-size:13px}
-.hero h1{font-size:clamp(32px,6vw,55px);line-height:1.4;margin:15px 0}
-.hero h1 span{color:var(--gold)}
-.hero p{color:#bbb;line-height:2;max-width:650px;margin:0 auto 22px}
-.section{padding:35px 0}
-.section h2{font-size:25px;margin-bottom:8px}
-.sub{color:#aaa;font-size:13px;margin-bottom:22px}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
-.chip{background:#171717;border:1px solid #444;color:white;padding:9px 14px;border-radius:30px}
-.chip.active{background:var(--gold);color:#111;border-color:var(--gold)}
-.search{width:100%;padding:13px;background:#171717;border:1px solid #444;color:white;border-radius:9px;margin-bottom:18px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.art{height:155px;background:radial-gradient(circle,#514020,#17130d);display:grid;place-items:center;color:var(--gold);font-size:48px}
-.info{padding:13px}
-.info small{color:var(--gold)}
-.info h3{font-size:14px;min-height:35px}
-.price{font-size:17px;font-weight:bold;color:var(--gold);margin:12px 0}
-.add{width:100%;padding:10px;background:var(--gold);border:0;border-radius:8px;font-weight:bold}
-footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:#aaa;line-height:2}
-footer strong{color:var(--gold)}
-.overlay{display:none;position:fixed;inset:0;background:#000d;z-index:20;align-items:center;justify-content:center;padding:15px}
-.overlay.open{display:flex}
-.modal{background:#191919;border:1px solid var(--gold);border-radius:15px;padding:20px;width:100%;max-width:500px;max-height:85vh;overflow:auto}
-.modal h2{color:var(--gold)}
-.cartline{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #444;padding:12px 0;font-size:13px}
-.cartline button{background:none;border:0;color:#f88}
-.total{padding:18px 0;color:var(--gold);font-weight:bold;font-size:19px;display:flex;justify-content:space-between}
-.actions{display:flex;gap:8px}
-.actions button{flex:1}
-@media(max-width:850px){.grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:600px){.grid{grid-template-columns:repeat(2,1fr);gap:9px}.art{height:125px}.info{padding:10px}.info h3{font-size:12px}.brand h2{font-size:13px}.hero{padding:45px 0 30px}.hero h1{font-size:34px}}
+:root{--pink:#e94368;--pink2:#ff7890;--ink:#24232a;--muted:#77727a;--soft:#fff0f3;--line:#f4dce2;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:Tahoma,Arial,sans-serif}button,a{font:inherit}a{text-decoration:none;color:inherit}.wrap{width:min(1180px,94%);margin:auto}
+header{height:76px;background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #f5e8eb;box-shadow:0 4px 20px #5c24300a}.head{height:100%;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{display:flex;align-items:center;gap:10px}.logo{width:44px;height:44px;border-radius:15px;background:linear-gradient(135deg,var(--pink),#ff9aac);color:white;display:grid;place-items:center;font-size:23px;font-weight:bold;box-shadow:0 5px 14px #e9436830}.brand h1{font-size:17px;margin:0}.brand small{display:block;color:var(--pink);font-size:9px;letter-spacing:1.5px;margin-top:4px}.nav{display:flex;align-items:center;gap:9px}.iconbtn{width:42px;height:42px;border:1px solid var(--line);background:white;border-radius:50%;cursor:pointer;position:relative;font-size:18px}.count{position:absolute;top:-5px;left:-4px;background:var(--pink);color:white;border-radius:20px;font-size:10px;min-width:18px;padding:3px}.menu{display:none}
+.hero{padding:25px 0 8px}.slides{height:360px;position:relative;overflow:hidden;border-radius:20px;background:linear-gradient(120deg,#fbdde4,#f7a9b9 55%,#e94368);box-shadow:0 12px 35px #a62c4a18}.slide{position:absolute;inset:0;display:flex;align-items:center;padding:clamp(22px,6vw,70px);gap:20px;opacity:0;transform:translateX(18px);transition:opacity .7s,transform .7s;pointer-events:none}.slide.active{opacity:1;transform:none;pointer-events:auto}.slide:nth-child(2){background:linear-gradient(115deg,#f5e9ee,#e7c5d0 55%,#b66d83)}.slide:nth-child(3){background:linear-gradient(115deg,#ffe7d9,#f8b7a6 55%,#d76d6d)}.slidecopy{max-width:55%;z-index:1}.eyebrow{color:#9d3150;font-weight:bold;font-size:13px}.slide h2{font-size:clamp(25px,4vw,42px);line-height:1.4;margin:12px 0}.slide p{line-height:1.9;color:#5d4650;margin:0 0 20px}.cta{display:inline-flex;background:var(--pink);color:white;padding:12px 23px;border-radius:9px;font-weight:bold;box-shadow:0 7px 18px #e9436830}.heroart{margin-right:auto;width:38%;height:82%;display:grid;place-items:center;font-size:clamp(85px,15vw,165px);filter:drop-shadow(0 20px 14px #6d314044);animation:float 4s ease-in-out infinite}@keyframes float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-12px) rotate(3deg)}}.dots{display:flex;justify-content:center;gap:9px;padding:12px}.dot{width:11px;height:11px;border:2px solid var(--pink);border-radius:20px;background:white;cursor:pointer;transition:.3s}.dot.active{width:28px;background:var(--pink)}
+.section{padding:35px 0}.sectionhead{display:flex;align-items:end;justify-content:space-between;margin-bottom:20px}.section h2{font-size:25px;margin:0}.hint{color:var(--muted);font-size:13px;margin-top:8px}.categories{display:flex;gap:10px;overflow:auto;padding:4px 1px 14px;scrollbar-width:none}.categories::-webkit-scrollbar{display:none}.cat{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:30px;padding:10px 17px;color:#51454b;cursor:pointer;transition:.25s}.cat.active,.cat:hover{background:var(--pink);border-color:var(--pink);color:white;transform:translateY(-2px)}
+.search{width:100%;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:5px 0 18px;outline:none;background:#fffafa}.search:focus{border-color:var(--pink);box-shadow:0 0 0 3px #e9436815}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{border:1px solid #f4e7ea;border-radius:16px;overflow:hidden;background:white;transition:transform .3s,box-shadow .3s;animation:appear .5s both}.card:hover{transform:translateY(-5px);box-shadow:0 14px 30px #6c24300e}@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}.productart{height:180px;display:grid;place-items:center;background:linear-gradient(145deg,#fff8fa,#fbe8ed);font-size:70px;position:relative}.productart:after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:#fff;box-shadow:0 8px 25px #a84d6414;z-index:0}.productart span{z-index:1;filter:drop-shadow(0 8px 5px #5a253022)}.details{padding:14px}.tag{font-size:11px;color:var(--pink)}.details h3{font-size:14px;line-height:1.6;min-height:44px;margin:7px 0}.price{font-weight:bold;color:var(--pink);font-size:17px;margin:12px 0}.add{width:100%;border:0;border-radius:9px;background:var(--pink);color:white;padding:11px;cursor:pointer;transition:.2s}.add:active{transform:scale(.97)}.empty{color:var(--muted);padding:25px}
+.about{background:var(--soft);border-radius:22px;padding:28px;margin:20px auto 35px}.about p{line-height:2;color:#574b50}.legal{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:#fff;border:1px solid #f3dbe1;border-radius:14px;padding:15px;margin-top:18px}.legalmark{width:50px;height:50px;background:#e8f1e8;border-radius:12px;display:grid;place-items:center;font-size:25px}.legal strong{display:block}.legal small{display:block;color:var(--muted);margin-top:5px}
+footer{background:#fff0f3;padding:30px 0;color:#51454b;line-height:2}.footgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}.footgrid h3{color:var(--pink)}.footgrid a{display:block;margin:5px 0}.copyright{text-align:center;border-top:1px solid #f0d6de;margin-top:22px;padding-top:15px;font-size:12px;color:#8a737a}
+.overlay{display:none;position:fixed;inset:0;background:#24151dcc;z-index:30;align-items:center;justify-content:center;padding:15px}.overlay.open{display:flex}.modal{background:white;border-radius:18px;padding:20px;width:min(520px,100%);max-height:85vh;overflow:auto}.modal h2{color:var(--pink);margin-top:0}.cartline{display:flex;justify-content:space-between;align-items:center;gap:8px;border-bottom:1px solid var(--line);padding:12px 0;font-size:13px}.cartline button{border:0;background:none;color:#d33;cursor:pointer}.total{display:flex;justify-content:space-between;padding:18px 0;font-weight:bold;color:var(--pink);font-size:18px}.actions{display:flex;gap:8px}.actions button{flex:1}.secondary{border:1px solid var(--line);background:white;color:var(--ink);border-radius:9px;padding:11px;cursor:pointer}
+@media(max-width:850px){.grid{grid-template-columns:repeat(3,1fr)}.slides{height:320px}.productart{height:155px}}
+@media(max-width:600px){header{height:66px}.brand h1{font-size:14px}.logo{width:39px;height:39px}.menu{display:inline-block}.nav .hide-mobile{display:none}.slides{height:300px;border-radius:14px}.slide{padding:22px;align-items:center}.slidecopy{max-width:62%}.slide h2{font-size:25px}.slide p{font-size:12px;line-height:1.8}.heroart{width:34%;font-size:82px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.productart{height:135px;font-size:58px}.details{padding:10px}.details h3{font-size:12px;min-height:42px}.price{font-size:15px}.section{padding:25px 0}.section h2{font-size:21px}.footgrid{grid-template-columns:1fr 1fr}.footgrid>div:first-child{grid-column:1/-1}.about{padding:20px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<header>
-<div class="wrap head">
-<div class="brand">
-<div class="logo">M</div>
-<div><h2>المركز للاتصالات</h2><small>AL MARKAZ TELECOM</small></div>
-</div>
-<button class="btn" onclick="openCart()">🛒 السلة (<span id="count">0</span>)</button>
-</div>
-</header>
-
-<section class="hero">
-<div class="wrap">
-<div class="eyebrow">✦ وجهتك التقنية الموثوقة</div>
-<h1>المركز للاتصالات<br><span>تقنية تليق بك</span></h1>
-<p>اكتشف أحدث الهواتف الذكية والأجهزة والإكسسوارات. تسوق بسهولة وتواصل معنا مباشرة لإتمام طلبك.</p>
-<a href="#shop" class="btn gold">اكتشف المنتجات ←</a>
-<a href="https://wa.me/966550011909" class="btn">تواصل معنا</a>
-</div>
-</section>
-
-<main class="wrap section" id="shop">
-<h2>منتجاتنا</h2>
-<p class="sub">اكتشف تشكيلتنا التقنية</p>
-<div class="filters" id="filters"></div>
-<input class="search" id="search" placeholder="ابحث عن منتج..." oninput="render()">
-<div class="grid" id="products"></div>
-</main>
-
-<footer>
-<strong>المركز للاتصالات</strong><br>
-AL MARKAZ TELECOM<br>
-المملكة العربية السعودية 🇸🇦<br>
-واتساب: 966550011909<br>
-© <span id="year"></span> جميع الحقوق محفوظة
-</footer>
-
-<div class="overlay" id="cart">
-<div class="modal">
-<h2>سلة المشتريات</h2>
-<div id="items"></div>
-<div class="total"><span>الإجمالي</span><span id="total">0 ر.س</span></div>
-<div class="actions">
-<button class="btn gold" onclick="sendOrder()">إرسال الطلب واتساب</button>
-<button class="btn" onclick="closeCart()">إغلاق</button>
-</div>
-</div>
-</div>
-
+<header><div class="wrap head">
+<a class="brand" href="#"><div class="logo">M</div><div><h1>المركز للاتصالات</h1><small>AL MARKAZ TELECOM</small></div></a>
+<nav class="nav"><button class="iconbtn hide-mobile" aria-label="بحث" onclick="document.getElementById('search').focus()">⌕</button><button class="iconbtn" aria-label="السلة" onclick="openCart()">🛍<span class="count" id="count">0</span></button><button class="iconbtn menu" aria-label="القائمة" onclick="document.getElementById('shop').scrollIntoView()">☰</button></nav>
+</div></header>
+<section class="hero wrap"><div class="slides" id="slides">
+<article class="slide active"><div class="slidecopy"><div class="eyebrow">✦ أحدث الأجهزة بين يديك</div><h2>تقنية تليق بك<br>وتفاصيل تصنع الفرق</h2><p>اكتشف أحدث الهواتف والإكسسوارات في المركز للاتصالات.</p><a class="cta" href="#shop">تسوق الآن</a></div><div class="heroart">📱</div></article>
+<article class="slide"><div class="slidecopy"><div class="eyebrow">✦ عروض وإكسسوارات</div><h2>كمّل أناقة جهازك</h2><p>سماعات، شواحن، أغطية وحماية بتفاصيل تناسبك.</p><a class="cta" href="#shop">اكتشف المنتجات</a></div><div class="heroart">🎧</div></article>
+<article class="slide"><div class="slidecopy"><div class="eyebrow">✦ عالمك الذكي</div><h2>كل أجهزتك<br>في مكان واحد</h2><p>تسوق الساعات الذكية والأجهزة اللوحية والإكسسوارات.</p><a class="cta" href="#shop">تصفح المتجر</a></div><div class="heroart">⌚</div></article>
+</div><div class="dots" id="dots"><button class="dot active" aria-label="العرض الأول"></button><button class="dot" aria-label="العرض الثاني"></button><button class="dot" aria-label="العرض الثالث"></button></div></section>
+<main class="wrap" id="shop"><section class="section"><div class="sectionhead"><div><h2>تسوق حسب القسم</h2><div class="hint">اختر القسم المناسب لك</div></div></div><div class="categories" id="filters"></div>
+<div class="sectionhead"><div><h2>منتجاتنا</h2><div class="hint">تصفح تشكيلتنا التقنية</div></div></div><input class="search" id="search" placeholder="ابحث عن منتج..." oninput="render()"><div class="grid" id="products"></div></section>
+<section class="about"><h2>المركز للاتصالات</h2><p>وجهتك للأجهزة الذكية والاتصالات والإكسسوارات. نسعد بخدمتكم والإجابة عن استفساراتكم عبر قنوات التواصل المتاحة.</p>
+<div class="legal"><div class="legalmark">🇸🇦</div><div><strong>بيانات المؤسسة</strong><small>مؤسسة شايع علي بن أحمد وحيشي التجارية</small><small>الرقم الموحد: 7040501822</small></div></div></section></main>
+<footer><div class="wrap"><div class="footgrid"><div><h3>المركز للاتصالات</h3><p>تقنية تليق بك. تسوق أحدث الأجهزة والإكسسوارات بسهولة.</p></div><div><h3>روابط مهمة</h3><a href="#shop">المنتجات</a><a href="#shop">الأقسام</a><a href="https://wa.me/966550011909">تواصل معنا</a></div><div><h3>تواصل معنا</h3><a href="https://wa.me/966550011909">واتساب: 966550011909</a><a href="#shop">المملكة العربية السعودية</a></div></div><div class="copyright">© <span id="year"></span> المركز للاتصالات — جميع الحقوق محفوظة</div></div></footer>
+<div class="overlay" id="cart"><div class="modal"><h2>سلة المشتريات</h2><div id="items"></div><div class="total"><span>الإجمالي</span><span id="total">0 ر.س</span></div><div class="actions"><button class="cta" onclick="sendOrder()">إرسال الطلب واتساب</button><button class="secondary" onclick="closeCart()">إغلاق</button></div></div></div>
 <script>
 const phone="966550011909";
 const products=[
-{id:1,name:"iPhone 17 Pro Max",cat:"آيفون",price:5699,icon:"📱"},
-{id:2,name:"iPhone 17 Pro",cat:"آيفون",price:4999,icon:"📱"},
-{id:3,name:"iPhone 16 Pro Max",cat:"آيفون",price:4499,icon:"📱"},
-{id:4,name:"Samsung S25 Ultra",cat:"سامسونج",price:4899,icon:"📱"},
-{id:5,name:"Samsung Galaxy Z Fold",cat:"سامسونج",price:6499,icon:"📱"},
-{id:6,name:"iPad Air",cat:"أجهزة لوحية",price:2699,icon:"▣"},
-{id:7,name:"Apple Watch",cat:"ساعات",price:1599,icon:"⌚"},
-{id:8,name:"Galaxy Watch",cat:"ساعات",price:999,icon:"⌚"},
-{id:9,name:"AirPods",cat:"إكسسوارات",price:799,icon:"🎧"},
-{id:10,name:"شاحن USB-C",cat:"إكسسوارات",price:129,icon:"🔌"},
-{id:11,name:"كفر حماية",cat:"إكسسوارات",price:89,icon:"📦"},
-{id:12,name:"حماية شاشة",cat:"إكسسوارات",price:49,icon:"🛡️"}
-];
+{id:1,name:"iPhone 17 Pro Max",cat:"آيفون",price:5699,icon:"📱"},{id:2,name:"iPhone 17 Pro",cat:"آيفون",price:4999,icon:"📱"},{id:3,name:"iPhone 16 Pro Max",cat:"آيفون",price:4499,icon:"📱"},{id:4,name:"Samsung S25 Ultra",cat:"سامسونج",price:4899,icon:"📱"},{id:5,name:"Samsung Galaxy Z Fold",cat:"سامسونج",price:6499,icon:"📱"},{id:6,name:"iPad Air",cat:"أجهزة لوحية",price:2699,icon:"▣"},{id:7,name:"Apple Watch",cat:"ساعات",price:1599,icon:"⌚"},{id:8,name:"Galaxy Watch",cat:"ساعات",price:999,icon:"⌚"},{id:9,name:"AirPods",cat:"سماعات",price:799,icon:"🎧"},{id:10,name:"شاحن USB-C",cat:"إكسسوارات",price:129,icon:"🔌"},{id:11,name:"كفر حماية",cat:"إكسسوارات",price:89,icon:"📦"},{id:12,name:"حماية شاشة",cat:"إكسسوارات",price:49,icon:"🛡️"}];
 let category="الكل",cart=[];
 const cats=["الكل",...new Set(products.map(p=>p.cat))];
 function money(n){return n.toLocaleString("en-US")+" ر.س"}
-function renderFilters(){
-document.getElementById("filters").innerHTML=cats.map(c=>`<button class="chip ${c===category?"active":""}" onclick="category=${JSON.stringify(c)};renderFilters();render()">${c}</button>`).join("");
-}
-function render(){
-let q=document.getElementById("search").value.toLowerCase();
-let arr=products.filter(p=>(category==="الكل"||p.cat===category)&&p.name.toLowerCase().includes(q));
-document.getElementById("products").innerHTML=arr.map(p=>`
-<div class="card">
-<div class="art">${p.icon}</div>
-<div class="info">
-<small>${p.cat}</small>
-<h3>${p.name}</h3>
-<div class="price">${money(p.price)}</div>
-<button class="add" onclick="add(${p.id})">أضف للسلة +</button>
-</div>
-</div>`).join("")||"<p>لا توجد منتجات</p>";
-}
-function add(id){
-let x=cart.find(p=>p.id===id);
-if(x)x.qty++;else cart.push({id,qty:1});
-document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.qty,0);
-}
-function openCart(){renderCart();document.getElementById("cart").classList.add("open")}
-function closeCart(){document.getElementById("cart").classList.remove("open")}
-function renderCart(){
-document.getElementById("items").innerHTML=cart.map(x=>{
-let p=products.find(y=>y.id===x.id);
-return `<div class="cartline"><span>${p.name} × ${x.qty}</span><b>${money(p.price*x.qty)}</b><button onclick="removeItem(${x.id})">حذف</button></div>`;
-}).join("")||"<p>السلة فارغة</p>";
-document.getElementById("total").textContent=money(cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0));
-}
-function removeItem(id){
-cart=cart.filter(x=>x.id!==id);
-document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.qty,0);
-renderCart();
-}
-function sendOrder(){
-if(!cart.length){alert("السلة فارغة");return}
-let lines=cart.map(x=>{
-let p=products.find(y=>y.id===x.id);
-return p.name+" × "+x.qty+" = "+money(p.price*x.qty);
-});
-let total=cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0);
-let msg="طلب جديد من المركز للاتصالات\n"+lines.join("\n")+"\nالإجمالي: "+money(total)+"\nيرجى تأكيد توفر المنتجات والأسعار.";
-window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(msg),"_blank");
-}
-document.getElementById("year").textContent=new Date().getFullYear();
-renderFilters();render();
-</script>
-</body>
-</html>
+function renderFilters(){document.getElementById("filters").innerHTML=cats.map(c=>'<button class="cat '+(c===category?'active':'')+'" onclick="category='+JSON.stringify(c)+';renderFilters();render()">'+c+'</button>').join("")}
+function render(){let q=document.getElementById("search").value.toLowerCase();let arr=products.filter(p=>(category==="الكل"||p.cat===category)&&p.name.toLowerCase().includes(q));document.getElementById("products").innerHTML=arr.map(p=>'<article class="card"><div class="productart"><span>'+p.icon+'</span></div><div class="details"><small class="tag">'+p.cat+'</small><h3>'+p.name+'</h3><div class="price">'+money(p.price)+'</div><button class="add" onclick="add('+p.id+')">أضف إلى السلة ＋</button></div></article>').join("")||'<p class="empty">لا توجد منتجات مطابقة.</p>'}
+function add(id){let x=cart.find(p=>p.id===id);if(x)x.qty++;else cart.push({id,qty:1});document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.qty,0)}
+function openCart(){renderCart();document.getElementById("cart").classList.add("open")}function closeCart(){document.getElementById("cart").classList.remove("open")}
+function renderCart(){document.getElementById("items").innerHTML=cart.map(x=>{let p=products.find(y=>y.id===x.id);return '<div class="cartline"><span>'+p.name+' × '+x.qty+'</span><b>'+money(p.price*x.qty)+'</b><button onclick="removeItem('+x.id+')">حذف</button></div>'}).join("")||'<p class="empty">السلة فارغة</p>';document.getElementById("total").textContent=money(cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0))}
+function removeItem(id){cart=cart.filter(x=>x.id!==id);document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.qty,0);renderCart()}
+function sendOrder(){if(!cart.length){alert("السلة فارغة");return}let lines=cart.map(x=>{let p=products.find(y=>y.id===x.id);return p.name+" × "+x.qty+" = "+money(p.price*x.qty)});let total=cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0);let msg="طلب جديد من المركز للاتصالات\n"+lines.join("\n")+"\nالإجمالي: "+money(total)+"\nيرجى تأكيد توفر المنتجات والأسعار.";window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(msg),"_blank")}
+let slideIndex=0;const slides=[...document.querySelectorAll(".slide")],dots=[...document.querySelectorAll(".dot")];function showSlide(i){slideIndex=i;slides.forEach((s,n)=>s.classList.toggle("active",n===i));dots.forEach((d,n)=>d.classList.toggle("active",n===i))}dots.forEach((d,i)=>d.addEventListener("click",()=>showSlide(i)));setInterval(()=>showSlide((slideIndex+1)%slides.length),5000);
+document.getElementById("year").textContent=new Date().getFullYear();renderFilters();render();
+</script></body></html>
