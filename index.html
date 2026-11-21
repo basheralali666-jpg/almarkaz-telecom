@@ -465,7 +465,7 @@ footer a:hover{color:#e5c78e}
 <a class="cat primary-cat" href="#protection"><i>🛡️</i><b>بكجات الحماية</b><small>كفرات وحماية الشاشات</small></a>
 <a class="cat primary-cat" href="#accessories"><i>🔌</i><b>الإكسسوارات</b><small>شواحن وسماعات وملحقات</small></a><a class="cat primary-cat" href="#routers"><i>📡</i><b>الراوتر ومقوي الشبكات</b><small>أجهزة اتصال وشبكات</small></a><a class="cat primary-cat" href="#stickers"><i>✨</i><b>ستيكرات وملصقات الجوال</b><small>حماية ولمسات إضافية</small></a>
 </div>
-<div class="brand-shortcuts"><span>تصفح حسب الماركة</span><a href="#iphone">Apple iPhone</a><a href="#ipad">Apple iPad</a><a href="#huawei">HUAWEI</a><a href="#samsung">Samsung Galaxy</a></div>
+<div class="brand-shortcuts"><span>تصفح حسب الماركة</span><a href="#products" onclick="showBrandProducts('آيفون')">Apple iPhone</a><a href="#products" onclick="showBrandProducts('آيباد')">Apple iPad</a><a href="#products" onclick="showBrandProducts('هواوي')">HUAWEI</a><a href="#products" onclick="showBrandProducts('سامسونج')">Samsung Galaxy</a></div>
 <div class="more-categories"><span>أقسام إضافية</span><a href="#pc-accessories">ملحقات الكمبيوتر</a><a href="#screens">الشاشات والبروجكتر</a><a href="#cameras">الكاميرات</a><a href="#printers">الطابعات</a><a href="#smart-home">المنزل الذكي</a><a href="#audio">السماعات والصوتيات</a></div>
 </div></section>
 
@@ -618,6 +618,7 @@ function productCard(p){
 let image=officialModelImages[p.name];
 return '<article class="card"><button class="photo photo-button" onclick="showProduct('+p.id+')" aria-label="عرض '+p.name+'">'+(image?'<img src="'+image+'" alt="'+p.name+'" loading="lazy" onerror="this.style.display=&quot;none&quot;;this.parentElement.classList.add(&quot;image-failed&quot;)" style="width:100%;height:100%;object-fit:contain">':'<span class="no-model-photo">'+p.icon+'<br>صورة المنتج قيد الإضافة</span>')+'</button><div class="info"><span class="tag">'+p.cat+'</span><h3>'+p.name+'</h3><div class="price">'+money(p.price)+'</div>'+priceNote(p)+'<div class="product-actions"><button class="add" onclick="showProduct('+p.id+')">تفاصيل المنتج</button><button class="cart-add" onclick="add('+p.id+')">أضف للسلة +</button></div></div></article>';
 }
+function showBrandProducts(category){const filter=document.getElementById("categoryFilter");if(filter){filter.value=category;render();}document.getElementById("products")?.scrollIntoView({behavior:"smooth",block:"start"});}
 function render(){
  const q=(document.getElementById("search")?.value+" "+(document.getElementById("catalogSearch")?.value||"")).trim().toLowerCase();
  const filter=document.getElementById("categoryFilter")?.value||"all";
