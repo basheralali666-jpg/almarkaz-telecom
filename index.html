@@ -375,6 +375,9 @@ footer{background:linear-gradient(135deg,#091225,#172744);border-top:3px solid v
 @media(max-width:760px){.slides{border-radius:18px}.slide:before{background:linear-gradient(90deg,#0b1427ee 0%,#0b1427cc 60%,#0b142744 100%)}.copy{max-width:70%}.art{opacity:.88}.category-section{scroll-margin-top:145px}}
 @media(max-width:600px){.top{background:#fffefa}.search input{border-radius:10px}.slides{height:285px}.slide{padding:19px}.copy h1{font-size:clamp(22px,6vw,29px)}.copy p{font-size:11px;line-height:1.9}.art{font-size:76px}.cat{flex-basis:112px;padding:14px 7px}.photo{height:145px}.info{padding:11px}.price{font-size:15px}.service-hub{border-radius:17px}.foot{gap:14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.cat,.cta,.service-submit{transition:none}}
+</style><style id="temporary-market-prices">
+.temp-price-note{display:block;margin-top:5px;color:#8a6b35;font-size:10px;line-height:1.7}
+.detail-price+.temp-price-note{margin-bottom:12px}
 </style></head><body>
 <div class="promo"><span>✦ عروض المركز للاتصالات ✦ أحدث الأجهزة والإكسسوارات ✦ أسعار مميزة ✦ اطلب الآن عبر واتساب 966550011909 ✦</span></div>
 <header><div class="wrap top"><a class="brand" href="#"><div class="logo">M</div><div><b>المركز للاتصالات</b><small>AL MARKAZ TELECOM</small></div></a><div class="search"><input id="search" placeholder="ابحث عن المنتجات..." oninput="render()"></div><div class="tools"><button class="tool" onclick="document.getElementById('search').focus()">⌕</button><button class="tool" onclick="openCart()">🛒<span class="count" id="count">0</span></button></div></div><nav class="main-nav"><div class="wrap nav">
@@ -464,33 +467,33 @@ const phone="966550011909",products=[
 {id:12,name:"Huawei FreeBuds SE 2",cat:"سماعات",price:89,icon:"🎧",source:"#products"}
 ,
 {id:13,name:"iPhone Duo 256GB",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
-{id:14,name:"iPhone 18 Pro Max",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
-{id:15,name:"iPhone 18 Pro",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
-{id:16,name:"iPhone Air",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
-{id:17,name:"iPhone 17 Pro Max",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
-{id:18,name:"iPhone 17 Pro",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
-{id:19,name:"iPhone 17",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
-{id:20,name:"iPhone 17e",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:14,name:"iPhone 18 Pro Max",cat:"آيفون",price:6099,tempPrice:true,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:15,name:"iPhone 18 Pro",cat:"آيفون",price:5699,tempPrice:true,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:16,name:"iPhone Air",cat:"آيفون",price:3999,tempPrice:true,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:17,name:"iPhone 17 Pro Max",cat:"آيفون",price:4999,tempPrice:true,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:18,name:"iPhone 17 Pro",cat:"آيفون",price:4499,tempPrice:true,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:19,name:"iPhone 17",cat:"آيفون",price:3799,tempPrice:true,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:20,name:"iPhone 17e",cat:"آيفون",price:2799,tempPrice:true,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
 {id:21,name:"iPhone 16",cat:"آيفون",price:null,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
-{id:22,name:"Samsung Galaxy S26 Ultra",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
-{id:23,name:"Samsung Galaxy S26+",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
-{id:24,name:"Samsung Galaxy S26",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
-{id:25,name:"Samsung Galaxy S26 FE",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
-{id:26,name:"Samsung Galaxy S25 Ultra",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
+{id:22,name:"Samsung Galaxy S26 Ultra",cat:"سامسونج",price:3999,tempPrice:true,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
+{id:23,name:"Samsung Galaxy S26+",cat:"سامسونج",price:3599,tempPrice:true,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
+{id:24,name:"Samsung Galaxy S26",cat:"سامسونج",price:4049,tempPrice:true,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
+{id:25,name:"Samsung Galaxy S26 FE",cat:"سامسونج",price:2999,tempPrice:true,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
+{id:26,name:"Samsung Galaxy S25 Ultra",cat:"سامسونج",price:3399,tempPrice:true,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
 {id:27,name:"Samsung Galaxy S25 Edge",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
 {id:28,name:"Samsung Galaxy S25+",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
 {id:29,name:"Samsung Galaxy S25",cat:"سامسونج",price:null,icon:"📱",source:"https://www.samsung.com/sa_en/smartphones/galaxy-s/"},
-{id:30,name:"Samsung Galaxy Z Fold8 Ultra",cat:"سامسونج",price:null,icon:"📱",source:"#products"},
-{id:31,name:"Samsung Galaxy Z Fold8",cat:"سامسونج",price:null,icon:"📱",source:"#products"},
-{id:32,name:"Samsung Galaxy Z Flip8",cat:"سامسونج",price:null,icon:"📱",source:"#products"},
+{id:30,name:"Samsung Galaxy Z Fold8 Ultra",cat:"سامسونج",price:7999,tempPrice:true,icon:"📱",source:"#products"},
+{id:31,name:"Samsung Galaxy Z Fold8",cat:"سامسونج",price:7199,tempPrice:true,icon:"📱",source:"#products"},
+{id:32,name:"Samsung Galaxy Z Flip8",cat:"سامسونج",price:4799,tempPrice:true,icon:"📱",source:"#products"},
 {id:33,name:"Samsung Galaxy Z Fold7",cat:"سامسونج",price:null,icon:"📱",source:"#products"},
 {id:34,name:"Samsung Galaxy Z Flip7",cat:"سامسونج",price:null,icon:"📱",source:"#products"},
 {id:35,name:"Samsung Galaxy A57 5G",cat:"سامسونج",price:null,icon:"📱",source:"#products"},
 {id:36,name:"Samsung Galaxy A56 5G",cat:"سامسونج",price:null,icon:"📱",source:"#products"},
 {id:37,name:"Samsung Galaxy A36 5G",cat:"سامسونج",price:null,icon:"📱",source:"#products"},
 {id:38,name:"Samsung Galaxy A26 5G",cat:"سامسونج",price:null,icon:"📱",source:"#products"},
-{id:39,name:"HUAWEI Pura 90s Pro Max",cat:"هواوي",price:null,icon:"📱",source:"#products"},
-{id:40,name:"HUAWEI Pura 90s Pro",cat:"هواوي",price:null,icon:"📱",source:"#products"},
+{id:39,name:"HUAWEI Pura 90s Pro Max",cat:"هواوي",price:4099,tempPrice:true,icon:"📱",source:"#products"},
+{id:40,name:"HUAWEI Pura 90s Pro",cat:"هواوي",price:3499,tempPrice:true,icon:"📱",source:"#products"},
 {id:41,name:"HUAWEI Pura 80 Pro",cat:"هواوي",price:null,icon:"📱",source:"https://consumer.huawei.com/sa/phones/"},
 {id:42,name:"HUAWEI Pura 80",cat:"هواوي",price:null,icon:"📱",source:"https://consumer.huawei.com/sa/phones/"},
 {id:43,name:"HUAWEI Mate X6",cat:"هواوي",price:null,icon:"📱",source:"https://consumer.huawei.com/sa/phones/"},
@@ -522,7 +525,7 @@ const phone="966550011909",products=[
 {id:69,name:"iPhone 17 Pro Silicone Case",cat:"كفرات",price:null,icon:"📱"},
 {id:70,name:"iPhone Tempered Glass Protector",cat:"حمايات",price:null,icon:"🛡️"},{id:71,name:"Apple Watch Ultra 3",cat:"ساعات ذكية",price:null,icon:"⌚"}
 ];let cart=[];try{cart=JSON.parse(localStorage.getItem("almarkaz_cart")||"[]");if(!Array.isArray(cart))cart=[]}catch(e){cart=[]}
-function money(n){return n==null?"السعر عند الطلب":n.toLocaleString("en-US")+" ر.س"}
+function money(n){return n==null?"السعر عند الطلب":n.toLocaleString("en-US")+" ر.س"}function priceNote(p){return p.tempPrice?'<small class="temp-price-note">سعر استرشادي مؤقت — قابل للتغير حسب المتجر واللون والسعة</small>':""}
 const tabletModels=["Apple iPad Pro 13-inch","Apple iPad Air 11-inch","Samsung Galaxy Tab S11 Ultra","HUAWEI MatePad Pro Max 13.2"];
 const brandModels={
 iphone:["iPhone Duo","iPhone 18 Pro Max","iPhone 18 Pro","iPhone Air","iPhone 17 Pro Max","iPhone 17 Pro","iPhone 17","iPhone 17e","iPhone 16"],
@@ -552,10 +555,10 @@ const storeSections=[
 ];
 function productCard(p){
 let image=officialModelImages[p.name];
-return '<article class="card"><button class="photo photo-button" onclick="showProduct('+p.id+')" aria-label="عرض '+p.name+'">'+(image?'<img src="'+image+'" alt="'+p.name+'" loading="lazy" onerror="this.style.display=&quot;none&quot;;this.parentElement.classList.add(&quot;image-failed&quot;)" style="width:100%;height:100%;object-fit:contain">':'<span class="no-model-photo">'+p.icon+'<br>صورة المنتج قيد الإضافة</span>')+'</button><div class="info"><span class="tag">'+p.cat+'</span><h3>'+p.name+'</h3><div class="price">'+money(p.price)+'</div><div class="product-actions"><button class="add" onclick="showProduct('+p.id+')">تفاصيل المنتج</button><button class="cart-add" onclick="add('+p.id+')">أضف للسلة +</button></div></div></article>';
+return '<article class="card"><button class="photo photo-button" onclick="showProduct('+p.id+')" aria-label="عرض '+p.name+'">'+(image?'<img src="'+image+'" alt="'+p.name+'" loading="lazy" onerror="this.style.display=&quot;none&quot;;this.parentElement.classList.add(&quot;image-failed&quot;)" style="width:100%;height:100%;object-fit:contain">':'<span class="no-model-photo">'+p.icon+'<br>صورة المنتج قيد الإضافة</span>')+'</button><div class="info"><span class="tag">'+p.cat+'</span><h3>'+p.name+'</h3><div class="price">'+money(p.price)+'</div>'+priceNote(p)+'<div class="product-actions"><button class="add" onclick="showProduct('+p.id+')">تفاصيل المنتج</button><button class="cart-add" onclick="add('+p.id+')">أضف للسلة +</button></div></div></article>';
 }
 function render(){let q=(document.getElementById("search").value+" "+(document.getElementById("catalogSearch")?.value||"")).trim().toLowerCase();let filter=document.getElementById("categoryFilter")?.value||"all";let sort=document.getElementById("sortProducts")?.value||"default";fillBrandModels("iphoneModels",brandModels.iphone.filter(x=>x.toLowerCase().includes(q)));fillBrandModels("ipadModels",tabletModels.filter(x=>x.toLowerCase().includes(q)));fillBrandModels("huaweiModels",brandModels.huawei.filter(x=>x.toLowerCase().includes(q)));fillBrandModels("samsungModels",brandModels.samsung.filter(x=>x.toLowerCase().includes(q)));document.getElementById("under499Products").innerHTML=products.filter(p=>p.price!==null&&p.price<499&&(p.name+" "+p.cat).toLowerCase().includes(q)).slice(0,8).map(productCard).join("")||"<div class=\"panel\">لا توجد منتجات مطابقة حالياً.</div>";document.getElementById("categorySections").innerHTML=storeSections.map(s=>{let found=products.filter(p=>s.cats.includes(p.cat)&&(p.name+" "+p.cat).toLowerCase().includes(q)&&(filter==="all"||p.cat===filter));if(sort==="name")found.sort((a,b)=>a.name.localeCompare(b.name));if(sort==="price")found.sort((a,b)=>(a.price??Infinity)-(b.price??Infinity));return '<section class="category-section" id="'+s.id+'"><div class="heading"><div><h2>'+s.icon+' '+s.title+'</h2><p>'+s.subtitle+'</p></div><span style="font-size:11px;color:#999">'+found.length+' منتجات</span></div>'+(found.length?'<div class="grid">'+found.map(productCard).join("")+'</div>':'<div class="empty-category"><span>'+s.icon+'</span><b>نجهّز هذا القسم لعرض المنتجات</b><p>للتأكد من الموديلات المتاحة والأسعار الحالية، تواصل مع فريق المركز مباشرة.</p><a target="_blank" rel="noopener" href="https://wa.me/'+phone+'?text='+encodeURIComponent("أرغب بالاستفسار عن قسم "+s.title+" والمنتجات المتوفرة")+'">استفسر عن المنتجات عبر واتساب ↗</a></div>')+'</section>'}).join("")}
-function showProduct(id){const p=products.find(x=>x.id===id);if(!p)return;const image=officialModelImages[p.name];document.getElementById("productDetail").innerHTML='<div class="detail-layout"><div class="detail-photo">'+(image?'<img src="'+image+'" alt="'+p.name+'">':'<div class="no-model-photo">'+p.icon+'<br>صورة المنتج قيد الإضافة</div>')+'</div><div class="detail-copy"><span class="tag">'+p.cat+'</span><h2>'+p.name+'</h2><div class="detail-price">'+money(p.price)+'</div><p>للاستفسار عن المواصفات والتوفر والضمان، تواصل مع فريق المركز للاتصالات.</p><div class="detail-actions"><button class="cta" onclick="add('+p.id+');closeProduct();openCart()">أضف للسلة</button><button class="secondary" onclick="askProduct('+p.id+')">استفسر عبر واتساب</button></div></div></div>';document.getElementById("productModal").classList.add("open")}function closeProduct(){document.getElementById("productModal").classList.remove("open")}function sendServiceRequest(event,type){
+function showProduct(id){const p=products.find(x=>x.id===id);if(!p)return;const image=officialModelImages[p.name];document.getElementById("productDetail").innerHTML='<div class="detail-layout"><div class="detail-photo">'+(image?'<img src="'+image+'" alt="'+p.name+'">':'<div class="no-model-photo">'+p.icon+'<br>صورة المنتج قيد الإضافة</div>')+'</div><div class="detail-copy"><span class="tag">'+p.cat+'</span><h2>'+p.name+'</h2><div class="detail-price">'+money(p.price)+'</div>'+priceNote(p)+'<p>للاستفسار عن المواصفات والتوفر والضمان، تواصل مع فريق المركز للاتصالات.</p><div class="detail-actions"><button class="cta" onclick="add('+p.id+');closeProduct();openCart()">أضف للسلة</button><button class="secondary" onclick="askProduct('+p.id+')">استفسر عبر واتساب</button></div></div></div>';document.getElementById("productModal").classList.add("open")}function closeProduct(){document.getElementById("productModal").classList.remove("open")}function sendServiceRequest(event,type){
 event.preventDefault();
 const form=event.currentTarget, data=new FormData(form);
 const labels=type==="mobile"?["طلب صيانة متنقلة من المركز للاتصالات","الاسم","رقم التواصل","نوع الجهاز","نوع العطل","الموقع","تفاصيل إضافية"]:["طلب خدمة برمجية من المركز للاتصالات","الاسم","رقم التواصل","نوع الجهاز","الخدمة المطلوبة","تفاصيل الطلب"];
