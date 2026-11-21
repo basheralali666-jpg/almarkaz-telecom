@@ -446,7 +446,26 @@ footer a:hover{color:#e5c78e}
  .top{padding:10px 0}.nav{gap:16px}
 }
 </style>
-</head><body>
+<style>
+/* Premium product specification layout */
+.product-modal .spec-panel{margin:22px 0;padding:20px;background:linear-gradient(145deg,#fff,#f7f8fb);border:1px solid #e5e8ef;border-radius:16px;box-shadow:0 8px 26px #1822380a}
+.product-modal .spec-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid #e9ebf1}
+.product-modal .spec-kicker{display:block;color:#b5122b;font-size:9px;font-weight:800;letter-spacing:1.5px;direction:ltr;text-align:right}
+.product-modal .spec-head h3{margin:5px 0 2px;font-size:19px;color:#171923}
+.product-modal .spec-head p{margin:0;color:#858b98;font-size:11px}
+.product-modal .spec-count{flex:none;padding:7px 10px;border-radius:20px;background:#fff0f2;color:#b5122b;font-size:10px;font-weight:bold}
+.product-modal .spec-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.product-modal .spec-tile{min-width:0;padding:13px 14px;background:#fff;border:1px solid #eceef3;border-radius:11px}
+.product-modal .spec-tile span{display:block;margin-bottom:6px;color:#8a909d;font-size:10px;font-weight:bold}
+.product-modal .spec-tile b{display:block;color:#303747;font-size:12px;line-height:1.9;font-weight:600}
+.product-modal .spec-extra{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:13px}
+.product-modal .spec-extra>div{padding:14px;background:#f1f3f7;border-radius:11px}
+.product-modal .spec-extra b{font-size:11px;color:#333b4a}
+.product-modal .spec-extra p{margin:7px 0 0;font-size:11px;line-height:1.9;color:#687080}
+.product-modal .spec-foot{display:block;margin-top:14px;padding-top:12px;border-top:1px solid #e9ebf1;color:#828895;font-size:10px;line-height:1.8}
+.product-modal .spec-foot a{color:#b5122b;font-weight:bold;text-decoration:none}
+@media(max-width:600px){.product-modal .spec-panel{padding:14px;border-radius:13px}.product-modal .spec-head h3{font-size:16px}.product-modal .spec-grid{grid-template-columns:1fr}.product-modal .spec-extra{grid-template-columns:1fr}.product-modal .spec-tile{padding:11px 12px}}
+</style></head><body>
 <div class="promo"><span>✦ عروض المركز للاتصالات ✦ أحدث الأجهزة والإكسسوارات ✦ أسعار مميزة ✦ اطلب الآن عبر واتساب 966550011909 ✦</span></div>
 <header><div class="wrap top"><a class="brand" href="#"><div class="logo">M</div><div><b>المركز للاتصالات</b><small>AL MARKAZ TELECOM</small></div></a><div class="search"><input id="search" placeholder="ابحث عن المنتجات..." oninput="render()"></div><div class="tools"><button class="tool" onclick="document.getElementById('search').focus()">⌕</button><button class="tool" onclick="openCart()">🛒<span class="count" id="count">0</span></button></div></div><nav class="main-nav"><div class="wrap nav">
 <a href="#">الرئيسية</a><a href="#under499" class="nav-deal">جوالات بأقل من 499 ريال</a>
@@ -658,7 +677,7 @@ const verifiedPhonePrices={
 function verifiedPhonePriceMarkup(id){const rows=verifiedPhonePrices[id];if(!rows)return "";return '<section class="spec-panel"><h3>الأسعار حسب السعة واللون</h3><div class="spec-list">'+rows.map(x=>'<div class="spec-row"><b>'+x[0]+' — '+x[1]+'</b><span>'+money(x[2])+' · '+x[3]+'</span></div>').join("")+'</div><small>أسعار رُصدت في صفحات المتاجر وتشمل الضريبة وفق العرض المنشور؛ قد تتغير حسب المخزون والعروض.</small></section>'}
 function specsMarkup(p){
  const saved=productSpecs[p.id];
- if(saved)return '<section class="spec-panel"><h3>المواصفات الفنية</h3><div class="spec-list">'+saved.groups.map(x=>'<div class="spec-row"><b>'+x[0]+'</b><span>'+x[1]+'</span></div>').join('')+'</div><h3>محتويات العلبة</h3><p>'+saved.box+'</p><h3>الملحقات المتوافقة</h3><p>'+saved.accessories+'</p><small>قد تختلف المواصفات حسب رقم الطراز والسوق. <a href="'+saved.url+'" target="_blank" rel="noopener">مرجع المواصفات ↗</a></small></section>';
+ if(saved)return '<section class="spec-panel"><div class="spec-head"><div><span class="spec-kicker">AL MARKAZ • PRODUCT INFO</span><h3>مواصفات المنتج</h3><p>كل ما تحتاج معرفته قبل الشراء</p></div><span class="spec-count">'+saved.groups.length+' مواصفات</span></div><div class="spec-grid">'+saved.groups.map(x=>'<div class="spec-tile"><span>'+x[0]+'</span><b>'+x[1]+'</b></div>').join('')+'</div><div class="spec-extra"><div><b>📦 محتويات العلبة</b><p>'+saved.box+'</p></div><div><b>✨ الملحقات المتوافقة</b><p>'+saved.accessories+'</p></div></div><small class="spec-foot">قد تختلف المواصفات حسب رقم الطراز والسوق. <a href="'+saved.url+'" target="_blank" rel="noopener">عرض مرجع المواصفات ↗</a></small></section>';
  const n=p.name,c=p.cat;
  const rows=[];
  const add=(k,v)=>rows.push([k,v]);
@@ -773,8 +792,8 @@ function specsMarkup(p){
    add("الاتصال والتوافق","تحقق من Wi‑Fi أو Zigbee أو البروتوكول المدعوم ومن توافق التطبيق والمنطقة");
    add("التركيب والتخزين","تختلف خيارات التركيب والتسجيل والتخزين المحلي أو السحابي حسب رقم الطراز");
  }
- const rowsHTML=rows.map(x=>'<div class="spec-row"><b>'+x[0]+'</b><span>'+x[1]+'</span></div>').join("");
- return '<section class="spec-panel"><h3>تفاصيل ومواصفات المنتج</h3><div class="spec-list">'+rowsHTML+'</div><h3>محتويات العلبة</h3><p>تُعرض محتويات النسخة الفعلية حسب البائع والسوق؛ يرجى تأكيد وجود الشاحن والكابل والملحقات قبل الشراء.</p><h3>الملحقات المتوافقة</h3><p>يتم اختيار الملحقات بعد مطابقة رقم الموديل الكامل والنسخة الإقليمية لتجنب عدم التوافق.</p><small>تنبيه: المواصفات الرقمية الدقيقة والسعات والألوان قد تختلف حسب SKU والسوق. لا تُعرض قيمة غير مؤكدة على أنها مواصفة نهائية؛ يمكن للمركز تأكيد النسخة قبل إتمام الطلب.</small></section>';
+ const rowsHTML=rows.map(x=>'<div class="spec-tile"><span>'+x[0]+'</span><b>'+x[1]+'</b></div>').join("");
+ return '<section class="spec-panel"><div class="spec-head"><div><span class="spec-kicker">AL MARKAZ • PRODUCT INFO</span><h3>تفاصيل ومواصفات المنتج</h3><p>نظرة واضحة على أهم المعلومات</p></div><span class="spec-count">'+rows.length+' تفاصيل</span></div><div class="spec-grid">'+rowsHTML+'</div><div class="spec-extra"><div><b>📦 محتويات العلبة</b><p>تُعرض محتويات النسخة الفعلية حسب البائع والسوق؛ يرجى تأكيد وجود الشاحن والكابل والملحقات قبل الشراء.</p></div><div><b>✨ الملحقات المتوافقة</b><p>يتم اختيار الملحقات بعد مطابقة رقم الموديل الكامل والنسخة الإقليمية لتجنب عدم التوافق.</p></div></div><small class="spec-foot">تنبيه: المواصفات الرقمية الدقيقة والسعات والألوان قد تختلف حسب SKU والسوق. يمكن للمركز تأكيد النسخة قبل إتمام الطلب.</small></section>';
 }function isPhoneProduct(p){return /iphone|galaxy|huawei|هواوي|سامسونج/i.test(p.name)||["آيفون","جوالات"].includes(p.cat)}
 function selectedVariant(){return {capacity:(document.getElementById("variantCapacity")?.value||"").trim(),color:(document.getElementById("variantColor")?.value||"").trim()}}
 function phoneColorHex(n){const m={"أسود":"#171717","أسود فلكي":"#22252b","أبيض":"#f4f3ef","أبيض سحابي":"#f2f1ec","فضي":"#c9cdd2","ذهبي فاتح":"#d8c29a","أزرق":"#5474a7","أزرق سماوي":"#8bb8d8","أزرق ضبابي":"#8b9ba9","نيلي عميق":"#333d69","برتقالي":"#df7a36","برتقالي كوني":"#d97735","زهري":"#e7b7c5","ليلكي ناعم":"#c9b6dc","أخضر رمادي":"#9ca99e","أخضر":"#66856b","بنفسجي":"#8d75a9","رمادي":"#8c929b","جليدي":"#d7e1e8","عنابي":"#713744"};return m[n]||"#d9dce2"}
