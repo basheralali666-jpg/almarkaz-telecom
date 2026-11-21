@@ -514,6 +514,7 @@ const phone="966550011909",products=[
 ,
 {id:13,name:"iPhone Duo 256GB",cat:"آيفون",price:10469,tempPrice:false,noonPrice:true,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
 {id:14,name:"iPhone 18 Pro Max",cat:"آيفون",price:6299,tempPrice:false,noonPrice:true,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
+{id:72,name:"iPhone 18",cat:"آيفون",price:null,tempPrice:false,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
 {id:15,name:"iPhone 18 Pro",cat:"آيفون",price:5089,tempPrice:false,noonPrice:true,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
 {id:16,name:"iPhone Air",cat:"آيفون",price:3249,tempPrice:false,noonPrice:true,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
 {id:17,name:"iPhone 17 Pro Max",cat:"آيفون",price:4969,tempPrice:false,noonPrice:true,icon:"📱",source:"https://www.apple.com/sa-ar/iphone/"},
@@ -578,7 +579,7 @@ const phone="966550011909",products=[
 {id:76,name:"ستيكر حماية خلفية شفاف للآيفون",cat:"ستيكرات",price:null,tempPrice:false,icon:"✨"},
 {id:77,name:"ستيكر حماية جانبية للجوال",cat:"ستيكرات",price:null,tempPrice:false,icon:"✨"},
 {id:78,name:"ستيكرات ديكور وخلفيات للجوال",cat:"ستيكرات",price:null,tempPrice:false,icon:"✨"}];let cart=[];try{cart=JSON.parse(localStorage.getItem("almarkaz_cart")||"[]");if(!Array.isArray(cart))cart=[]}catch(e){cart=[]}
-function money(n){return n==null?"السعر عند الطلب":n.toLocaleString("en-US")+" ر.س"}function priceNote(p){return p.noonPrice?'<small class="temp-price-note">السعر المرصود في نون السعودية — قابل للتغير</small>':""}
+function money(n){return n==null?"السعر عند الطلب":n.toLocaleString("en-US")+" ر.س"}function priceNote(p){return ""}
 const tabletModels=["Apple iPad Pro 13-inch","Apple iPad Air 11-inch","Samsung Galaxy Tab S11 Ultra","HUAWEI MatePad Pro Max 13.2"];
 const brandModels={
 iphone:["iPhone Duo","iPhone 18 Pro Max","iPhone 18 Pro","iPhone Air","iPhone 17 Pro Max","iPhone 17 Pro","iPhone 17","iPhone 17e","iPhone 16"],
