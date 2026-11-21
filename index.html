@@ -524,7 +524,14 @@ const phone="966550011909",products=[
 {id:68,name:"Baseus 65W GaN Charger",cat:"شواحن",price:179,tempPrice:true,icon:"🔌"},
 {id:69,name:"iPhone 17 Pro Silicone Case",cat:"كفرات",price:199,tempPrice:true,icon:"📱"},
 {id:70,name:"iPhone Tempered Glass Protector",cat:"حمايات",price:39,tempPrice:true,icon:"🛡️"},{id:71,name:"Apple Watch Ultra 3",cat:"ساعات ذكية",price:3299,tempPrice:true,icon:"⌚"}
-];let cart=[];try{cart=JSON.parse(localStorage.getItem("almarkaz_cart")||"[]");if(!Array.isArray(cart))cart=[]}catch(e){cart=[]}
+,
+{id:72,name:"TP-Link Deco X50-5G Router",cat:"راوترات",price:1059,tempPrice:true,icon:"📡"},
+{id:73,name:"TP-Link Archer AX55 Wi-Fi 6 Router",cat:"راوترات",price:225,tempPrice:true,icon:"📡"},
+{id:74,name:"TP-Link Archer NX200 5G Router",cat:"راوترات",price:769,tempPrice:true,icon:"📡"},
+{id:75,name:"Huawei B535-932 4G Router",cat:"راوترات",price:279,tempPrice:true,icon:"📡"},
+{id:76,name:"ستيكر حماية خلفية شفاف للآيفون",cat:"ستيكرات",price:29,tempPrice:true,icon:"✨"},
+{id:77,name:"ستيكر حماية جانبية للجوال",cat:"ستيكرات",price:39,tempPrice:true,icon:"✨"},
+{id:78,name:"ستيكرات ديكور وخلفيات للجوال",cat:"ستيكرات",price:49,tempPrice:true,icon:"✨"}];let cart=[];try{cart=JSON.parse(localStorage.getItem("almarkaz_cart")||"[]");if(!Array.isArray(cart))cart=[]}catch(e){cart=[]}
 function money(n){return n==null?"السعر عند الطلب":n.toLocaleString("en-US")+" ر.س"}function priceNote(p){return p.tempPrice?'<small class="temp-price-note">سعر استرشادي مؤقت — قابل للتغير حسب المتجر واللون والسعة</small>':""}
 const tabletModels=["Apple iPad Pro 13-inch","Apple iPad Air 11-inch","Samsung Galaxy Tab S11 Ultra","HUAWEI MatePad Pro Max 13.2"];
 const brandModels={
