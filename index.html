@@ -626,6 +626,69 @@ footer{background:#171717}
 .floating-wa{background:#168b58}
 @media(max-width:600px){.slides{height:275px}.copy{max-width:64%}.art{font-size:78px}}
 </style>
+
+<style id="storefront-polish-stage2">
+/* Storefront polish: category-first shopping, clean catalog and responsive controls */
+:root{--red:#c91525;--ink:#171923;--muted:#737987;--line:#e8e9ed}
+html{scroll-padding-top:150px}
+.main-nav{border-top:1px solid #f0f0f0;border-bottom:1px solid #ededed}
+.main-nav .nav{min-height:48px}
+.nav-drop{position:relative;display:flex;align-items:center}
+.nav-menu{display:none;position:absolute;top:100%;right:0;min-width:190px;padding:8px;background:#fff;border:1px solid #ececf0;border-radius:7px;box-shadow:0 12px 28px #10182818;z-index:40}
+.nav-drop:hover .nav-menu,.nav-drop:focus-within .nav-menu{display:grid;gap:2px}
+.nav-menu a{padding:10px 12px;border-radius:4px;white-space:nowrap}
+.nav-menu a:hover{background:#fff3f4}
+.hero{padding-top:20px}
+.slides{border:1px solid #e7e7e9}
+.dots .dot{cursor:pointer}
+.trust-strip{padding-top:14px;padding-bottom:25px}
+.trust-strip>div{border-radius:7px;box-shadow:none}
+main.wrap{border-radius:9px;border-color:#eeeeef;box-shadow:0 5px 22px #17192308}
+main.wrap>section{scroll-margin-top:145px}
+.heading{align-items:center;gap:12px}
+.heading h2{position:relative;padding-right:13px}
+.heading h2:before{content:"";position:absolute;right:0;top:4px;bottom:4px;width:3px;background:#c91525;border-radius:3px}
+.primary-cat{border-radius:7px;min-height:132px}
+.primary-cat i{border-radius:9px}
+.catalog-tools{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0 20px}
+.catalog-tools input,.catalog-tools select{min-height:43px;border:1px solid #e5e6e9;border-radius:5px;background:#fff;padding:10px 13px;color:#343844;font:12px Tahoma,Arial}
+.catalog-tools input{flex:1;min-width:190px}
+.catalog-tools select{min-width:145px}
+.category-section{padding-top:25px;margin-top:18px}
+.category-section .grid{align-items:stretch}
+.category-section .card{border-radius:7px;background:#fff}
+.category-section .photo{background:#f7f7f8}
+.category-section .info{padding:14px}
+.category-section .info h3{font-size:13px;line-height:1.8;color:#262934}
+.category-section .price{color:#171923;font-size:15px}
+.category-section .tag{font-weight:700}
+.product-actions{gap:8px}
+.product-actions .add,.product-actions .cart-add{min-height:39px}
+.benefit-grid article{border-radius:7px;border:1px solid #e9e9eb;box-shadow:none}
+.brandchip{border-radius:5px;background:#fff;transition:.2s}
+.brandchip:hover{border-color:#c91525;color:#c91525}
+.panel{border:1px solid #e9e9eb;background:#fafafa}
+footer{background:#171717}
+footer .company-legal{border-top:1px solid #ffffff24;margin-top:15px;padding-top:10px}
+footer .company-legal p{margin:5px 0}
+.floating-wa{box-shadow:0 5px 18px #0002}
+@media(max-width:760px){
+ .nav-menu{position:fixed;top:auto;right:12px;left:12px;max-height:65vh;overflow:auto}
+ .catalog-tools input{flex-basis:100%}
+ .catalog-tools select{flex:1;min-width:0}
+ .trust-strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .trust-strip>div{padding:10px}
+}
+@media(max-width:600px){
+ html{scroll-padding-top:175px}
+ .main-nav .nav{min-height:43px}
+ .heading h2{font-size:18px}
+ .category-section .info{padding:10px}
+ .category-section .info h3{font-size:12px}
+ .category-section .price{font-size:14px}
+ .trust-strip>div>b{width:34px;height:34px}
+}
+</style>
 </head><body>
 <div class="promo"><span>✦ عروض المركز للاتصالات ✦ أحدث الأجهزة والإكسسوارات ✦ أسعار مميزة ✦ اطلب الآن عبر واتساب 966550011909 ✦</span></div>
 <header><div class="wrap top"><a class="brand" href="#"><div class="logo">M</div><div><b>المركز للاتصالات</b><small>AL MARKAZ TELECOM</small><small class="legal-mini">مؤسسة شايع علي بن أحمد وحيشي التجارية</small></div></a><div class="search"><input id="search" placeholder="ابحث عن المنتجات..." oninput="render()"></div><div class="tools"><button class="tool" onclick="document.getElementById('search').focus()">⌕</button><button class="tool" onclick="openCart()">🛒<span class="count" id="count">0</span></button></div></div><nav class="main-nav"><div class="wrap nav">
