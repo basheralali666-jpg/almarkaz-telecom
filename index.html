@@ -739,6 +739,40 @@ footer .company-legal p{margin:5px 0}
   .brand-showcase .model-list{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 </style>
+
+<style id="almarkaz-viewport-override">
+/* Force the storefront into a true single-column phone layout, including in-app browsers */
+@media screen and (max-width: 900px){
+  .wrap{width:calc(100% - 28px)!important;max-width:680px!important;margin-left:auto!important;margin-right:auto!important}
+  .top{height:auto!important;min-height:68px!important;display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:10px!important;padding:10px 0!important}
+  .brand{min-width:0!important;flex:1 1 auto!important;gap:8px!important}
+  .brand .logo{display:grid!important;visibility:visible!important;opacity:1!important;width:42px!important;height:42px!important;flex:0 0 42px!important}
+  .brand b{display:block!important;font-size:14px!important}
+  .brand small{font-size:8px!important}
+  .search{display:none!important}
+  .tools{display:flex!important;flex:0 0 auto!important;margin-right:auto!important}
+  .main-nav .nav{display:flex!important;overflow-x:auto!important;white-space:nowrap!important;scrollbar-width:none!important}
+  .hero{padding:12px 0!important}
+  .slides{height:245px!important}
+  .slide{padding:18px!important}
+  .copy{max-width:62%!important}
+  .copy h1{font-size:23px!important}
+  .copy p{font-size:11px!important}
+  .art{max-width:38%!important;font-size:68px!important}
+  .art img{max-width:100%!important;height:auto!important;object-fit:contain!important}
+  .trust-strip{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  .primary-categories{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .catalog-tools{display:grid!important;grid-template-columns:1fr!important}
+  .catalog-tools input,.catalog-tools select{width:100%!important;min-width:0!important}
+  #categorySections .grid,.grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;justify-items:stretch!important;gap:14px!important}
+  #categorySections .card,.grid .card{width:100%!important;max-width:none!important;margin:0!important;justify-self:stretch!important}
+  .photo{height:230px!important}
+  .info{padding:14px!important}
+  .info h3{font-size:16px!important;min-height:0!important}
+  .price{font-size:18px!important}
+  .add,.cart-add{min-height:46px!important}
+}
+</style>
 </head><body>
 <div class="promo"><span>✦ عروض المركز للاتصالات ✦ أحدث الأجهزة والإكسسوارات ✦ أسعار مميزة ✦ اطلب الآن عبر واتساب 966550011909 ✦</span></div>
 <header><div class="wrap top"><a class="brand" href="#"><div class="logo">M</div><div><b>المركز للاتصالات</b><small>AL MARKAZ TELECOM</small><small class="legal-mini">مؤسسة شايع علي بن أحمد وحيشي التجارية</small></div></a><div class="search"><input id="search" placeholder="ابحث عن المنتجات..." oninput="render()"></div><div class="tools"><button class="tool" onclick="document.getElementById('search').focus()">⌕</button><button class="tool" onclick="openCart()">🛒<span class="count" id="count">0</span></button></div></div><nav class="main-nav"><div class="wrap nav">
